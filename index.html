@@ -60,6 +60,7 @@
     /* products */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
     .grid.tight{gap:12px}
+    .grid.tight.cols-4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
     .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
     .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 0 rgba(15,23,42,.03);display:flex;flex-direction:column;gap:10px;transition:transform .15s ease, box-shadow .15s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
@@ -153,29 +154,30 @@
         <div class="stack" style="margin-bottom:28px;gap:20px">
           <div>
             <h2 class="h2">کاتالوگ کامل محصولات آریاکوپلینگ</h2>
-            <p class="lead">تمامی تجهیزات آتش‌نشانی از کوپلینگ تا سیستم فوم در یک ویترین منظم؛ آماده تحویل و مطابق استانداردهای بین‌المللی.</p>
-            <div class="grid tight" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+            <p class="lead" style="margin:0 0 16px">تمامی تجهیزات آتش‌نشانی از کوپلینگ و شیلنگ تا سیستم فوم و اعلام حریق در یک چیدمان مینیمال و یکدست.</p>
+            <div class="grid tight cols-4">
               <div class="card" style="gap:6px;padding:12px"><div class="chip">کوپلینگ</div><strong>کوپلینگ آلومینیومی/برنجی</strong><p class="lead" style="margin:0">BS، DIN، STORZ، رزوه NPT و BSP</p></div>
               <div class="card" style="gap:6px;padding:12px"><div class="chip">شیلنگ</div><strong>شیلنگ برزنتی و لاستیکی</strong><p class="lead" style="margin:0">۱ تا ۴ اینچ، لایه داخلی مقاوم شعله</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">قرقره</div><strong>قرقره و هوزریلز</strong><p class="lead" style="margin:0">سقف/دیوار، خودکار و دستی</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">هیدرانت</div><strong>هیدرانت زمینی و ایستاده</strong><p class="lead" style="margin:0">بدنه داکتیل با روکش اپوکسی</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">نازل</div><strong>نازل و مونیتور آب/فوم</strong><p class="lead" style="margin:0">قابل تنظیم دبی و الگو</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">جابجایی</div><strong>فلنج، تبدیل و کپ</strong><p class="lead" style="margin:0">سایزهای مختلف برای اتصال سریع</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">قرقره</div><strong>قرقره دیواری و سقفی</strong><p class="lead" style="margin:0">هوزریل خودکار و دستی با نازل سه‌حالته</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">هیدرانت</div><strong>هیدرانت زمینی و ایستاده</strong><p class="lead" style="margin:0">بدنه داکتیل با روکش اپوکسی، خروجی BS/DIN</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">نازل</div><strong>نازل و مونیتور آب/فوم</strong><p class="lead" style="margin:0">قابل تنظیم دبی و الگو، بدنه آلومینیوم/برنز</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">اتصالات</div><strong>فلنج، تبدیل، کپ و گسکت</strong><p class="lead" style="margin:0">سایزهای کامل برای نصب شبکه</p></div>
               <div class="card" style="gap:6px;padding:12px"><div class="chip">کابینت</div><strong>جعبه آتش‌نشانی</strong><p class="lead" style="margin:0">یک و دو لاین، استیل و رنگ پودری</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">خاموش‌کننده</div><strong>کپسول پودر و CO₂</strong><p class="lead" style="margin:0">۱ تا ۱۲ کیلو، مانومتر دار</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">اسپرینکلر</div><strong>اسپرینکلر سقفی</strong><p class="lead" style="margin:0">دما و اوریفیس‌های متنوع</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">اعلام</div><strong>دتکتور، آژیر و پنل</strong><p class="lead" style="margin:0">ادرس‌پذیر و متعارف</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">فوم</div><strong>اینداکتور و ژنراتور فوم</strong><p class="lead" style="margin:0">میکسر خطی، تانک بالانس</p></div>
-              <div class="card" style="gap:6px;padding:12px"><div class="chip">ابزار</div><strong>لوازم جانبی امداد</strong><p class="lead" style="margin:0">شلنگ جمع‌کن، کلید هیدرانت، دستکش</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">کپسول</div><strong>خاموش‌کننده پودر و CO₂</strong><p class="lead" style="margin:0">۱ تا ۱۲ کیلو، مانومتر دار</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">اسپرینکلر</div><strong>اسپرینکلر سقفی و دیواری</strong><p class="lead" style="margin:0">دمای مختلف، پوشش نیکل/برنج</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">اعلام</div><strong>دتکتور، آژیر و پنل</strong><p class="lead" style="margin:0">آدرس‌پذیر و متعارف، شستی و فلاشر</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">فوم</div><strong>تانک و ژنراتور فوم</strong><p class="lead" style="margin:0">اینداکتور خطی، میکسر و تانک بالانس</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">شیرآلات</div><strong>شیر یکطرفه و فشارشکن</strong><p class="lead" style="margin:0">گلوب/گیت ولو و ولو توپی صنعتی</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">ابزار</div><strong>لوازم جانبی امداد</strong><p class="lead" style="margin:0">شلنگ جمع‌کن، کلید هیدرانت، دستکش و کلاه</p></div>
             </div>
           </div>
           <div class="panel">
-            <h3 class="h2" style="font-size:22px;margin:0 0 12px">چرا گرید جدید آریاکوپلینگ؟</h3>
+            <h3 class="h2" style="font-size:22px;margin:0 0 12px">چیدمان کامل تجهیزات</h3>
             <div class="list">
-              <div class="list-item"><span class="dot"></span><span>تفکیک رده صنعتی/شهری و سایز هر محصول برای انتخاب سریع</span></div>
-              <div class="list-item"><span class="dot"></span><span>تصاویر به‌روز تجهیزات آتش‌نشانی به‌جای فریم‌های قدیمی</span></div>
+              <div class="list-item"><span class="dot"></span><span>تفکیک رده صنعتی، ساختمانی و شهری برای انتخاب سریع</span></div>
+              <div class="list-item"><span class="dot"></span><span>تصاویر به‌روز از تجهیزات واقعی آتش‌نشانی</span></div>
               <div class="list-item"><span class="dot"></span><span>دسترسی مستقیم به دیتاشیت و کاتالوگ هر دسته</span></div>
-              <div class="list-item"><span class="dot"></span><span>CTA ثابت برای پیش‌فاکتور بدون نیاز به اسکرول‌های طولانی</span></div>
+              <div class="list-item"><span class="dot"></span><span>تمرکز بر نام و مشخصات فنی محصولات بدون حواشی</span></div>
             </div>
           </div>
         </div>
@@ -224,9 +226,9 @@
     <section class="section" id="design" style="background:var(--bg-2)">
       <div class="container stack">
         <div>
-          <span class="pill">مهندسی برای پایداری و سرعت پاسخ</span>
-          <h2 class="h2">UX مینیمال، نصب سریع، اطمینان بالا</h2>
-          <p class="lead">چیدمان گریدی محصولات، دسترسی سریع به کاتالوگ و انتخاب سایز، بدون اسکرول کند یا انیمیشن‌های سنگین.</p>
+          <span class="pill">مهندسی برای اطفای حریق مطمئن</span>
+          <h2 class="h2">چیدمان مینیمال، نصب سریع، اطمینان بالا</h2>
+          <p class="lead">گرید یکدست محصولات، لینک مستقیم کاتالوگ و انتخاب سایز، با تمرکز بر نام و مشخصات تجهیزات آتش‌نشانی.</p>
           <div class="list">
             <div class="list-item"><span class="dot"></span><span>مسیر تماس و پیش‌فاکتور همیشه قابل دسترس در بالای صفحه</span></div>
             <div class="list-item"><span class="dot"></span><span>فیلتراسیون ساده بر اساس دسته‌بندی و سایز</span></div>

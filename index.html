@@ -4,138 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#c4161c" />
-  <title>آریاکوپلینگ | سامانه پارکینگ و زیرساخت ماژولار</title>
-  <meta name="description" content="پارکینگ ماژولار، زیرساخت سریع و پایدار با تکیه بر ژئوتکستایل و اجرای چابک. طراحی شده برای فرودگاه‌ها، بنادر، لجستیک، رویدادها و پروژه‌های زیرساخت شهری با تکیه بر دانش ساخت داخل." />
+  <title>آریاکوپلینگ | تجهیزات آتش‌نشانی و ایمنی</title>
+  <meta name="description" content="آریاکوپلینگ تامین‌کننده تخصصی کوپلینگ، شیلنگ، هیدرانت و تجهیزات کامل آتش‌نشانی و ایمنی صنعتی." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --brand:#c4161c;
-      --brand-2:#ff3b30;
       --ink:#0f172a;
       --muted:#4b5563;
       --bg:#ffffff;
-      --bg-2:#f5f6fa;
-      --glass:rgba(255,255,255,.72);
+      --bg-2:#f7f7f9;
       --border:rgba(15,23,42,.08);
-      --radius:18px;
-      --shadow:0 20px 60px rgba(15,23,42,.12);
-      --shadow-2:0 10px 30px rgba(15,23,42,.10);
+      --radius:16px;
+      --shadow:0 12px 40px rgba(15,23,42,.12);
     }
     *{box-sizing:border-box}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family:"Vazirmatn",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-      line-height:1.8; overflow-x:hidden;
-    }
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    button{font-family:inherit}
-    .container{max-width:1180px; margin:0 auto; padding:0 18px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid transparent; background:linear-gradient(135deg,var(--brand),#8f0f13); color:#fff; font-weight:700; box-shadow:var(--shadow-2); cursor:pointer; transition:transform .2s ease, box-shadow .2s ease}
-    .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-    .btn--ghost{background:transparent; color:var(--brand); border-color:rgba(196,22,28,.22); box-shadow:none}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:var(--glass); border:1px solid var(--border); font-size:13px; color:var(--muted); backdrop-filter: blur(10px)}
-    .section{padding:84px 0}
-    .h2{font-size:clamp(24px,3vw,36px); margin:0 0 12px; line-height:1.3; letter-spacing:-.3px}
-    .lead{color:var(--muted); margin:0 0 18px}
-    .tag{display:inline-flex; align-items:center; gap:6px; font-size:13px; padding:6px 10px; border-radius:12px; background:rgba(196,22,28,.08); color:var(--brand); border:1px solid rgba(196,22,28,.18)}
-    .card{background:#fff; border:1px solid var(--border); border-radius:var(--radius); box-shadow:0 1px 0 rgba(15,23,42,.03)}
-    /* Topbar & Nav */
-    .topbar{background:var(--glass); border-bottom:1px solid var(--border); position:relative; z-index:30; backdrop-filter:blur(10px)}
-    .topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 0; font-size:13px; color:var(--muted); white-space:nowrap}
-    .topbar-left,.topbar-right{display:flex; align-items:center; gap:10px}
-    .sep{opacity:.35}
-    header{position:sticky; top:0; background:var(--glass); backdrop-filter:blur(10px); border-bottom:1px solid transparent; z-index:40; transition:border-color .2s ease, background .2s ease}
-    header.scrolled{border-color:var(--border); background:rgba(255,255,255,.9)}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 0}
-    .brand{display:flex; align-items:center; gap:10px}
-    .logo{width:46px; height:46px; border-radius:16px; background:radial-gradient(circle at 30% 30%,#ff6b61,var(--brand) 60%,#7e0b0f); position:relative; overflow:hidden; box-shadow:0 12px 26px rgba(196,22,28,.22)}
-    .logo:after{content:""; position:absolute; inset:-40%; background:conic-gradient(from 200deg,rgba(255,255,255,.0),rgba(255,255,255,.3),rgba(255,255,255,0)); animation:spin 8s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .brand-title{display:flex; flex-direction:column; line-height:1.2}
-    .brand-title strong{font-size:15px}
-    .brand-title span{font-size:12px; color:var(--muted)}
-    .nav-links{display:flex; align-items:center; gap:12px; font-size:14px; color:var(--muted)}
-    .nav-links a{padding:10px 12px; border-radius:12px; transition:background .15s ease, color .15s ease}
-    .nav-links a:hover{background:rgba(15,23,42,.04); color:var(--ink)}
-    .menu-btn{display:none; width:42px; height:42px; border-radius:14px; border:1px solid var(--border); background:#fff; cursor:pointer}
-    /* Hero */
-    .hero{position:relative; overflow:hidden; padding:80px 0 40px; background:radial-gradient(circle at 20% 20%,rgba(196,22,28,.18),transparent 48%),radial-gradient(circle at 80% 0%,rgba(15,23,42,.12),transparent 52%),linear-gradient(180deg,#fff,#fdf3f4)}
-    .hero:before{content:""; position:absolute; inset:-40%; background:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1400&q=80') center/cover; opacity:.18; mix-blend-mode:multiply; filter:saturate(.6)}
-    .hero-inner{position:relative; z-index:1; display:grid; grid-template-columns:1.05fr .95fr; gap:26px; align-items:center}
-    .hero h1{margin:12px 0; font-size:clamp(30px,3.5vw,46px); line-height:1.15; letter-spacing:-.5px}
-    .hero p{margin:0 0 18px; color:var(--muted); font-size:16px}
-    .hero-media{position:relative; border-radius:22px; overflow:hidden; border:1px solid rgba(15,23,42,.08); box-shadow:var(--shadow); background:linear-gradient(180deg,rgba(255,255,255,.9),#fff)}
-    .hero-media img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.92)}
-    .hero-media:after{content:"پارکینگ ماژولار با نصب سریع"; position:absolute; bottom:16px; right:16px; padding:10px 14px; background:rgba(15,23,42,.72); color:#fff; border-radius:12px; font-size:13px; letter-spacing:-.2px}
-    .hero-stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:22px}
-    .stat{padding:14px; border-radius:16px; background:var(--glass); border:1px solid var(--border); backdrop-filter:blur(10px); text-align:center}
-    .stat strong{display:block; font-size:20px; color:var(--brand); margin-bottom:4px}
-    .stat span{color:var(--muted); font-size:13px}
-    /* Designed for you */
-    .designed{display:grid; grid-template-columns:1.1fr .9fr; gap:20px; align-items:center}
-    .bullets{display:flex; flex-direction:column; gap:14px}
-    .bullet{display:flex; gap:12px; padding:12px 0; border-bottom:1px solid rgba(15,23,42,.08)}
-    .bullet:last-child{border-bottom:none}
-    .dot{width:12px; height:12px; border-radius:50%; background:var(--brand); margin-top:6px; box-shadow:0 0 0 6px rgba(196,22,28,.12)}
-    .tile{border-radius:20px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-2)}
-    .tile img{height:100%; object-fit:cover}
-    /* Logos strip */
-    .logos{display:flex; gap:22px; flex-wrap:wrap; align-items:center; opacity:.8; margin-top:14px}
-    .logos span{padding:10px 12px; border-radius:12px; background:#fff; border:1px solid var(--border); font-weight:600; color:var(--ink)}
-    /* Case studies */
-    .cases{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px}
-    .case-img{position:relative; border-radius:20px; overflow:hidden; min-height:280px; box-shadow:var(--shadow-2); border:1px solid var(--border)}
-    .case-img:after{content:"مطالعه موردی"; position:absolute; bottom:14px; right:14px; padding:8px 12px; background:rgba(15,23,42,.75); color:#fff; border-radius:12px; font-size:13px}
-    .case-img:nth-child(1){background:url('https://images.unsplash.com/photo-1582719478152-5c5c10e9863a?auto=format&fit=crop&w=1200&q=80') center/cover}
-    .case-img:nth-child(2){background:url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1200&q=80') center/cover}
-    .case-cta{display:flex; justify-content:flex-end; margin-top:12px}
-    /* Testimonial */
-    .testimonial{position:relative; padding:26px; border-radius:22px; background:linear-gradient(135deg,#fff,rgba(196,22,28,.04)); border:1px solid var(--border); box-shadow:var(--shadow-2); overflow:hidden}
-    .testimonial:after{content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 20%,rgba(196,22,28,.1),transparent 45%),radial-gradient(circle at 80% 80%,rgba(15,23,42,.08),transparent 48%); pointer-events:none}
-    .quote{font-size:20px; line-height:1.6; margin:0 0 12px}
-    /* Tech map */
-    .tech{background:linear-gradient(180deg,#0f172a,#141b2f); color:#e5e7eb; position:relative; overflow:hidden; border-radius:24px; padding:34px; box-shadow:var(--shadow)}
-    .tech:before{content:""; position:absolute; inset:-20%; background:url('https://www.transparenttextures.com/patterns/asfalt-light.png'); opacity:.25}
-    .tech-map{min-height:260px; background:url('https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1400&q=80') center/cover; border-radius:18px; border:1px solid rgba(255,255,255,.12); opacity:.9}
-    .tech-stats{display:flex; flex-wrap:wrap; gap:14px; margin-top:14px}
-    .tech-stats .pill{background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.16)}
-    /* Comparison table */
-    .table{overflow:hidden; border-radius:18px; border:1px solid var(--border); box-shadow:var(--shadow-2); margin-top:16px}
-    table{width:100%; border-collapse:collapse; background:#fff}
-    th,td{padding:14px; text-align:center; border-bottom:1px solid rgba(15,23,42,.06); font-size:14px}
-    th{background:rgba(196,22,28,.08); color:var(--brand)}
-    tr:nth-child(even){background:rgba(15,23,42,.02)}
-    /* Icon belt */
-    .icons{display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:18px}
-    .icon-card{padding:14px; text-align:center; border-radius:14px; border:1px solid var(--border); background:#fff; box-shadow:0 1px 0 rgba(15,23,42,.03)}
-    .icon-card .ic{width:54px; height:54px; margin:0 auto 8px; border-radius:18px; display:grid; place-items:center; background:rgba(196,22,28,.08); color:var(--brand); font-weight:800; font-size:18px}
-    /* CTA */
-    .cta{margin-top:26px; display:grid; grid-template-columns:1.1fr .9fr; gap:16px; align-items:center}
-    .cta-box{padding:22px; border-radius:20px; border:1px solid var(--border); background:linear-gradient(120deg,#fff,rgba(196,22,28,.05)); box-shadow:var(--shadow-2)}
-    .cta-side{padding:22px; border-radius:20px; background:linear-gradient(180deg,rgba(15,23,42,.92),#0b1020); color:#fff; position:relative; overflow:hidden}
-    .cta-side:after{content:""; position:absolute; inset:-20%; background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.08),transparent 45%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 50%)}
-    .cta-side > *{position:relative}
-    /* Footer */
-    footer{padding:38px 0 28px; background:linear-gradient(180deg,#fff,#f7f7f9); border-top:1px solid var(--border)}
-    .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:18px; align-items:start}
-    .foot a{display:block; padding:6px 0; color:var(--muted); font-size:13px}
-    .copy{margin-top:18px; padding-top:14px; border-top:1px solid rgba(15,23,42,.08); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px}
-    /* Reveal */
-    .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.in{opacity:1; transform:translateY(0)}
-    @media (max-width:1080px){
-      .hero-inner,.designed,.cases,.cta{grid-template-columns:1fr}
-      .icons{grid-template-columns:repeat(3,1fr)}
-      .hero-stats{grid-template-columns:repeat(2,1fr)}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.8;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 18px}
+    .section{padding:76px 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(196,22,28,.1);color:var(--brand);font-weight:600;font-size:13px}
+    .h2{font-size:clamp(24px,3vw,34px);margin:0 0 10px;letter-spacing:-.3px}
+    .lead{color:var(--muted);margin:0 0 16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid transparent;background:linear-gradient(135deg,var(--brand),#940b0f);color:#fff;font-weight:700;box-shadow:0 8px 24px rgba(196,22,28,.28);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(196,22,28,.28)}
+    .btn-ghost{background:#fff;border-color:var(--border);color:var(--ink);box-shadow:none}
+    /* topbar & nav */
+    .topbar{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:50}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;font-size:13px;color:var(--muted);white-space:nowrap}
+    .sep{opacity:.45}
+    header{border-bottom:1px solid transparent;position:sticky;top:41px;z-index:40;background:#fff;transition:border-color .2s ease}
+    header.scrolled{border-color:var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:14px;background:radial-gradient(circle at 35% 35%,#ff9a9e,var(--brand) 60%,#7c0b0f);position:relative;overflow:hidden;box-shadow:0 10px 24px rgba(196,22,28,.24)}
+    .brand-title{line-height:1.2}
+    .brand-title strong{display:block;font-size:15px}
+    .brand-title span{font-size:12px;color:var(--muted)}
+    .nav-links{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+    .nav-links a{padding:10px 12px;border-radius:12px;transition:background .15s ease}
+    .nav-links a:hover{background:rgba(15,23,42,.04)}
+    /* hero */
+    .hero{padding:72px 0 40px;background:linear-gradient(180deg,#fff,#fef2f2)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+    .hero h1{margin:12px 0;font-size:clamp(30px,3.4vw,44px);line-height:1.15;letter-spacing:-.5px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .hero-media{border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
+    .hero-media img{width:100%;height:100%;object-fit:cover}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{padding:14px;border:1px solid var(--border);border-radius:14px;background:#fff;display:flex;flex-direction:column;gap:6px;text-align:center}
+    .stat strong{font-size:20px;color:var(--brand)}
+    /* products */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 0 rgba(15,23,42,.03);display:flex;flex-direction:column;gap:10px;transition:transform .15s ease, box-shadow .15s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:12px;background:rgba(15,23,42,.04);color:var(--muted);font-size:12px}
+    /* checklist */
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .list-item{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .dot{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--brand);box-shadow:0 0 0 6px rgba(196,22,28,.12)}
+    /* layout blocks */
+    .panel{border:1px solid var(--border);border-radius:18px;padding:20px;background:#fff;box-shadow:0 8px 28px rgba(15,23,42,.06)}
+    .stack{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:center}
+    /* footer */
+    footer{padding:32px 0 24px;background:var(--bg-2);border-top:1px solid var(--border)}
+    .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:16px}
+    .foot a{display:block;padding:6px 0;color:var(--muted);font-size:13px}
+    .copy{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap}
+    @media (max-width:1024px){
+      .hero-grid,.stack{grid-template-columns:1fr}
+      header{top:0}
     }
     @media (max-width:720px){
-      .topbar-left{display:none}
+      .topbar-inner{flex-direction:column;align-items:flex-start;white-space:normal}
       .nav-links{display:none}
-      .menu-btn{display:block}
-      .icons{grid-template-columns:repeat(2,1fr)}
+      .hero-stats{grid-template-columns:repeat(2,1fr)}
+      .list{grid-template-columns:1fr}
       .foot-grid{grid-template-columns:1fr 1fr}
     }
   </style>
@@ -143,17 +90,15 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹، طبقه ۷</span>
-        <span class="sep">•</span>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span>دفتر مرکزی: فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹</span>
+        <span class="sep">|</span>
         <span>کارخانه: جاده آبعلی، بن‌بست ارس، پلاک ۹</span>
       </div>
-      <div class="topbar-right">
+      <div style="display:flex;gap:8px;align-items:center">
         <span>شنبه تا پنج‌شنبه ۷:۳۰ تا ۱۸</span>
-        <span class="sep">•</span>
-        <a href="#catalog">کاتالوگ</a>
-        <span class="sep">/</span>
-        <a href="#catalog">بروشور</a>
+        <span class="sep">|</span>
+        <a href="#catalog">کاتالوگ و بروشور</a>
       </div>
     </div>
   </div>
@@ -164,184 +109,139 @@
         <div class="logo" aria-hidden="true"></div>
         <div class="brand-title">
           <strong>آریاکوپلینگ</strong>
-          <span>پارکینگ و بستر ژئوتکستایل</span>
+          <span>تجهیزات آتش‌نشانی</span>
         </div>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#solutions">راهکارها</a>
-        <a href="#cases">مطالعات موردی</a>
-        <a href="#tech">فناوری</a>
-        <a href="#compare">مقایسه</a>
-        <a href="#contact">درخواست مشاوره</a>
+        <a href="#products">محصولات</a>
+        <a href="#design">مزایا</a>
+        <a href="#catalog">دانلودها</a>
+        <a href="#contact">ارتباط</a>
       </nav>
-      <div style="display:flex; align-items:center; gap:10px">
-        <a class="btn btn--ghost" href="#contact">ارتباط سریع</a>
-        <button class="menu-btn" aria-label="باز کردن منو">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-      </div>
+      <a class="btn btn-ghost" href="#contact">درخواست پیش‌فاکتور</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero" id="hero">
-      <div class="container hero-inner">
-        <div class="reveal">
-          <span class="pill"><span class="dot"></span> پارکینگ ماژولار – آماده بهره‌برداری در کمترین زمان</span>
-          <h1>راهکار پارکینگ ماژولار و زیرساخت سبک با هسته ژئوتکستایل</h1>
-          <p>طراحی و تولید یکپارچه برای فرودگاه‌ها، پایانه‌ها، بنادر و سایت‌های موقت یا دائمی. اجرای سریع، سطح باکیفیت و بدون نیاز به آسفالت حجیم.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="#contact">درخواست پیشنهاد فنی</a>
-            <a class="btn btn--ghost" href="#solutions">مشاهده راهکارها</a>
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">تجهیزات اطفای حریق صنعتی و شهری</span>
+          <h1>کوپلینگ، شیلنگ و سامانه کامل آتش‌نشانی با استاندارد بین‌المللی</h1>
+          <p>آریاکوپلینگ تامین‌کننده و تولیدکننده تجهیزات تخصصی آتش‌نشانی برای صنایع نفت و گاز، ساختمان‌های مرتفع، کارخانجات و ناوگان شهری.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="#catalog">مشاهده کاتالوگ محصولات</a>
+            <a class="btn btn-ghost" href="#products">محصولات پرفروش</a>
           </div>
           <div class="hero-stats">
-            <div class="stat">
-              <strong>۴۰٪</strong>
-              <span>کمتر از آسفالت</span>
-            </div>
-            <div class="stat">
-              <strong>۸۰٪</strong>
-              <span>سرعت اجرای بیشتر</span>
-            </div>
-            <div class="stat">
-              <strong>۷+ سال</strong>
-              <span>دوام در استفاده روزانه</span>
-            </div>
-            <div class="stat">
-              <strong>۱۰۰٪</strong>
-              <span>نفوذپذیری و حفاظت محیطی</span>
-            </div>
+            <div class="stat"><strong>+۴۰</strong><span>مدل کوپلینگ و هیدرانت</span></div>
+            <div class="stat"><strong>۷۲ ساعت</strong><span>آمادگی ارسال فوری</span></div>
+            <div class="stat"><strong>۵ گواهی</strong><span>استاندارد و کنترل کیفیت</span></div>
           </div>
         </div>
-        <div class="hero-media reveal">
-          <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" alt="پارکینگ ماژولار" loading="lazy">
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1484979045040-0ab3854b6cfe?auto=format&fit=crop&w=1400&q=80" alt="تجهیزات آتش‌نشانی" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="section" id="solutions">
-      <div class="container designed">
-        <div class="reveal">
-          <h2 class="h2">برای شما طراحی شده است</h2>
-          <p class="lead">پهن کنید و استفاده کنید. جابه‌جایی آسان میان سایت‌ها و آماده برای رویداد، پارکینگ مازاد، و ذخیره لجستیکی.</p>
-          <div class="bullets">
-            <div class="bullet"><span class="dot"></span> نصب فوری و قابل جمع‌شدن برای پروژه‌های موقت و دائمی</div>
-            <div class="bullet"><span class="dot"></span> آماده سرویس‌دهی روزانه ۳ تا ۱۰ سال بر اساس الگوی تردد</div>
-            <div class="bullet"><span class="dot"></span> کاهش dust و حفاظت از محیط اطراف با لایه ژئوتکستایل</div>
-            <div class="bullet"><span class="dot"></span> مناسب پارکینگ سازمانی، خطوط تولید خودرو، رویدادهای شهری و دانشگاهی</div>
-          </div>
-          <div class="logos">
-            <span>ایران‌خودرو</span><span>سایپا</span><span>MAPNA</span><span>Tehran Metro</span><span>Bandar Abbas</span>
-          </div>
-        </div>
-        <div class="tile reveal">
-          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80" alt="کاربری پارکینگ" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="cases">
+    <section class="section" id="products">
       <div class="container">
-        <div class="reveal">
-          <h2 class="h2">بیش از یک میلیون متر مربع اجرا شده</h2>
-          <p class="lead">اعتماد شرکت‌های حمل‌ونقل، خودروساز و زیرساختی به بستر ماژولار آریاکوپلینگ.</p>
-        </div>
-        <div class="cases">
-          <div class="case-img reveal"></div>
-          <div class="case-img reveal"></div>
-        </div>
-        <div class="case-cta">
-          <a class="btn" href="#contact">مشاهده مطالعات موردی</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="testimonial">
-      <div class="container">
-        <div class="testimonial reveal">
-          <p class="quote">«استفاده از بستر ماژولار باعث شد محوطه پارکینگ سایت ما ظرف چند روز آماده شود، بدون وقفه در بهره‌برداری و با هزینه کمتر از آسفالت‌کاری سنتی.»</p>
-          <div style="display:flex; align-items:center; gap:10px; position:relative">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="شاهد پروژه" style="width:46px;height:46px;border-radius:50%;object-fit:cover; border:2px solid rgba(196,22,28,.4)">
-            <div>
-              <div style="font-weight:700">سینا ابراهیمی</div>
-              <div style="color:var(--muted); font-size:13px">مدیر املاک و زیرساخت سازمانی</div>
+        <div class="stack" style="margin-bottom:24px">
+          <div>
+            <h2 class="h2">محصولات کلیدی آریاکوپلینگ</h2>
+            <p class="lead">انتخابی کامل از تجهیزات فشارقوی، آماده تحویل و قابل سفارشی‌سازی برای پروژه‌های شهری و صنعتی.</p>
+            <div class="list">
+              <div class="list-item"><span class="dot"></span><span>کوپلینگ آلومینیومی و برنجی با آب‌بندی مقاوم در برابر فشار بالا</span></div>
+              <div class="list-item"><span class="dot"></span><span>شیلنگ برزنتی و لاستیکی در سایزهای متنوع تا ۳ اینچ</span></div>
+              <div class="list-item"><span class="dot"></span><span>هیدرانت، نازل، قرقره شیلنگ و لوله‌های رایزر با پوشش ضدخوردگی</span></div>
+              <div class="list-item"><span class="dot"></span><span>جعبه آتش‌نشانی، اسپرینکلر، خاموش‌کننده و تجهیزات اعلام حریق</span></div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="grid">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1582719478318-82c2f6d93dc1?auto=format&fit=crop&w=800&q=80" alt="کوپلینگ آتش‌نشانی">
+                <div class="chip">کوپلینگ</div>
+                <strong>کوپلینگ آلومینیومی و برنجی</strong>
+                <p class="lead" style="margin:0">از سایز ۱.۵ تا ۴ اینچ، رزوه DIN و BS با تست فشار.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=800&q=80" alt="شیلنگ آتش نشانی">
+                <div class="chip">شیلنگ</div>
+                <strong>شیلنگ برزنتی فشارقوی</strong>
+                <p class="lead" style="margin:0">آستر مقاوم در برابر UV، مناسب عملیات شهری و صنعتی.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="هیدرانت">
+                <div class="chip">هیدرانت</div>
+                <strong>هیدرانت و رایزر آماده نصب</strong>
+                <p class="lead" style="margin:0">بدنه داکتیل با پوشش اپوکسی و قطعات یدکی کامل.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="سیستم ایمنی">
+                <div class="chip">ایمنی</div>
+                <strong>کیت کامل ایمنی و اعلام حریق</strong>
+                <p class="lead" style="margin:0">جعبه حریق، خاموش‌کننده، هشداردهنده و سنسور دود.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tech">
-      <div class="container tech">
-        <div class="reveal">
-          <h2 class="h2" style="color:#fff">فناوری ثبت‌شده و متکی بر تجربه ساخت</h2>
-          <p class="lead" style="color:#cbd5e1">لایه ژئوتکستایل مقاوم در برابر پارگی، مواد شیمیایی و UV. سامانه ماژولار ما عمر بالا و نفوذپذیری کنترل‌شده ارائه می‌دهد.</p>
+    <section class="section" id="design" style="background:var(--bg-2)">
+      <div class="container stack">
+        <div>
+          <span class="pill">مهندسی برای پایداری و سرعت پاسخ</span>
+          <h2 class="h2">UX مینیمال، نصب سریع، اطمینان بالا</h2>
+          <p class="lead">چیدمان گریدی محصولات، دسترسی سریع به کاتالوگ و انتخاب سایز، بدون اسکرول کند یا انیمیشن‌های سنگین.</p>
+          <div class="list">
+            <div class="list-item"><span class="dot"></span><span>مسیر تماس و پیش‌فاکتور همیشه قابل دسترس در بالای صفحه</span></div>
+            <div class="list-item"><span class="dot"></span><span>فیلتراسیون ساده بر اساس دسته‌بندی و سایز</span></div>
+            <div class="list-item"><span class="dot"></span><span>تصاویر واقعی از تجهیزات آتش‌نشانی برای اطمینان مشتری</span></div>
+            <div class="list-item"><span class="dot"></span><span>گرید منظم برای مقایسه مشخصات فنی هر محصول</span></div>
+          </div>
         </div>
-        <div class="tech-map reveal"></div>
-        <div class="tech-stats">
-          <span class="pill">۱۵۰+ نیروی متخصص</span>
-          <span class="pill">۵۵ پروژه فعال</span>
-          <span class="pill">۶۰ سال تجربه ترکیبی</span>
-          <span class="pill">۵ گواهی ایمنی و کیفیت</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="compare">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">جایگزینی متفاوت نسبت به آسفالت و بتن</h2>
-          <p class="lead">نفوذپذیری، هزینه کمتر و سرعت نصب بالاتر در کنار نگهداری ساده.</p>
-        </div>
-        <div class="table reveal">
-          <table>
-            <thead>
-              <tr>
-                <th>معیار</th>
-                <th>پارکینگ ماژولار</th>
-                <th>آسفالت</th>
-                <th>شن و ماسه</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>نفوذپذیری</td><td>بله</td><td>خیر</td><td>بله</td></tr>
-              <tr><td>هزینه اولیه</td><td>کمتر</td><td>بیشتر</td><td>متوسط</td></tr>
-              <tr><td>قابلیت جمع‌آوری</td><td>بله</td><td>خیر</td><td>محدود</td></tr>
-              <tr><td>طول عمر روزانه</td><td>۷-۱۰ سال</td><td>۱۰+ سال</td><td>۵-۷ سال</td></tr>
-              <tr><td>زمان نصب</td><td>۱ هفته برای هر هکتار</td><td>۳-۴ هفته</td><td>۲-۳ هفته</td></tr>
-              <tr><td>نگهداری</td><td>کم</td><td>متوسط</td><td>زیاد</td></tr>
-              <tr><td>دسترسی تجهیزات</td><td>سفارشی‌سازی رنگ و مارکینگ</td><td>محدود</td><td>محدود</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="usecases">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">کاربری‌های رایج</h2>
-          <p class="lead">از پارکینگ موقت تا بهره‌برداری دائمی در زیرساخت‌های حساس.</p>
-        </div>
-        <div class="icons">
-          <div class="icon-card reveal"><div class="ic">🚚</div>حمل‌ونقل و لجستیک</div>
-          <div class="icon-card reveal"><div class="ic">🏭</div>کارخانجات و انبار</div>
-          <div class="icon-card reveal"><div class="ic">🎟️</div>رویداد و نمایشگاه</div>
-          <div class="icon-card reveal"><div class="ic">🚗</div>خودروسازان</div>
-          <div class="icon-card reveal"><div class="ic">🏛️</div>دانشگاه و بیمارستان</div>
-          <div class="icon-card reveal"><div class="ic">🏗️</div>پروژه‌های عمرانی</div>
+        <div class="panel" style="background:#fff">
+          <h3 style="margin:0 0 12px">پروژه‌های منتخب</h3>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+            <div class="card" style="padding:12px">
+              <div class="chip">صنعتی</div>
+              <strong>سایت پتروشیمی ماهشهر</strong>
+              <p class="lead" style="margin:0">تجهیز کامل شبکه هیدرانت و کوپلینگ ضدخوردگی.</p>
+            </div>
+            <div class="card" style="padding:12px">
+              <div class="chip">شهری</div>
+              <strong>ایستگاه‌های آتش‌نشانی تهران</strong>
+              <p class="lead" style="margin:0">نوسازی شیلنگ و نازل فشارقوی در ۱۲ ایستگاه.</p>
+            </div>
+            <div class="card" style="padding:12px">
+              <div class="chip">ساختمان</div>
+              <strong>برج‌های اداری شمال تهران</strong>
+              <p class="lead" style="margin:0">نصب جعبه حریق، رایزر و سیستم اعلام.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="catalog">
-      <div class="container cta">
-        <div class="cta-box reveal">
-          <h2 class="h2">دیتاشیت و مشخصات فنی</h2>
-          <p class="lead">تمام جزئیات فنی، لایه‌بندی و استانداردهای بستر ماژولار در قالب کاتالوگ و بروشور آماده است.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
+      <div class="container stack" style="gap:14px">
+        <div class="panel">
+          <h2 class="h2">کاتالوگ و دیتاشیت</h2>
+          <p class="lead">مشخصات دقیق فشار کاری، متریال، تست‌ها و قطعات یدکی برای هر محصول.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
             <a class="btn" href="#">دانلود کاتالوگ</a>
-            <a class="btn btn--ghost" href="#">دانلود بروشور</a>
+            <a class="btn btn-ghost" href="#">دریافت بروشور PDF</a>
+          </div>
+        </div>
+        <div class="panel" style="background:linear-gradient(135deg,#0f172a,#121a2f);color:#fff">
+          <h3 class="h2" style="color:#fff;font-size:24px">مشاوره فوری</h3>
+          <p class="lead" style="color:#e2e8f0">اندازه، فشار کاری و استاندارد مورد نیاز را اعلام کنید تا پیشنهاد فنی و پیش‌فاکتور ارسال شود.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="tel:+982176202045">تماس ۰۲۱-۷۶۲۰۲۰۴۵</a>
+            <a class="btn btn-ghost" href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
           </div>
         </div>
         <div class="cta-side reveal">
@@ -352,16 +252,14 @@
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="cta-box reveal" style="text-align:center">
-          <div class="tag" style="margin-bottom:12px">گفت‌وگوی مستقیم</div>
-          <h2 class="h2">درخواست پیشنهاد و بازدید سایت</h2>
-          <p class="lead">جزئیات پروژه را ارسال کنید تا تیم فنی، زمان‌بندی و راهکار مناسب را آماده کند.</p>
-          <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:10px">
-            <a class="btn" href="tel:+982176202045">تماس: ۰۲۱-۷۶۲۰۲۰۴۵</a>
-            <a class="btn btn--ghost" href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
-          </div>
+    <section class="section" id="contact" style="padding-top:40px">
+      <div class="container panel" style="text-align:center">
+        <span class="pill" style="margin-bottom:10px">ارتباط مستقیم با تیم فنی</span>
+        <h2 class="h2">برای سفارش یا استعلام موجودی تماس بگیرید</h2>
+        <p class="lead">اطلاعات پروژه یا لیست اقلام را ارسال کنید تا سریع‌ترین زمان تحویل و قیمت به شما اعلام شود.</p>
+        <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn" href="tel:+982176202045">۰۲۱-۷۶۲۰۲۰۴۵</a>
+          <a class="btn btn-ghost" href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
         </div>
       </div>
     </section>
@@ -372,25 +270,25 @@
       <div class="foot-grid">
         <div class="foot">
           <div class="brand" style="margin-bottom:10px">
-            <div class="logo" style="width:36px; height:36px"></div>
+            <div class="logo" style="width:36px;height:36px"></div>
             <div class="brand-title">
               <strong>آریاکوپلینگ</strong>
-              <span>پارکینگ ماژولار</span>
+              <span>تجهیزات آتش‌نشانی</span>
             </div>
           </div>
-          <p style="margin:0; color:var(--muted)">تهران، فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹، طبقه ۷</p>
+          <p style="margin:0;color:var(--muted)">تهران، فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹، طبقه ۷</p>
         </div>
         <div class="foot">
-          <h4>راهکارها</h4>
-          <a href="#solutions">پارکینگ فرودگاهی</a>
-          <a href="#solutions">رویداد و نمایشگاه</a>
-          <a href="#solutions">سایت‌های صنعتی</a>
+          <h4>محصولات</h4>
+          <a href="#products">کوپلینگ و شیلنگ</a>
+          <a href="#products">هیدرانت و نازل</a>
+          <a href="#products">جعبه و اسپرینکلر</a>
         </div>
         <div class="foot">
-          <h4>فناوری</h4>
-          <a href="#tech">ژئوتکستایل</a>
-          <a href="#compare">مقایسه</a>
-          <a href="#catalog">دانلودها</a>
+          <h4>دانلودها</h4>
+          <a href="#catalog">کاتالوگ</a>
+          <a href="#catalog">بروشور</a>
+          <a href="#catalog">گواهی کیفیت</a>
         </div>
         <div class="foot">
           <h4>ارتباط</h4>
@@ -400,23 +298,14 @@
         </div>
       </div>
       <div class="copy">
-        <span>© ۱۴۰۲ آریاکوپلینگ</span>
+        <span>© ۱۴۰۳ آریاکوپلینگ</span>
         <span>تمام حقوق محفوظ است.</span>
       </div>
     </div>
   </footer>
 
   <script>
-    const headerEl = document.getElementById('header');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.2});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const headerEl=document.getElementById('header');
     window.addEventListener('scroll',()=>{
       if(window.scrollY>10) headerEl.classList.add('scrolled');
       else headerEl.classList.remove('scrolled');

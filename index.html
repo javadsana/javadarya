@@ -4,1386 +4,257 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#c4161c" />
-  <title>آریاکوپلینگ | طراح و تولیدکننده تجهیزات آتش‌نشانی</title>
-  <meta name="description" content="آریاکوپلینگ؛ طراحی و تولید تجهیزات آتش‌نشانی شامل جعبه آتش‌نشانی، قرقره و شیلنگ، اتصالات BS و STORZ، اسپرینکلر، نازل و شیرآلات. مشاوره و استعلام." />
-
-  <!-- Font (fallback-friendly) -->
+  <title>آریاکوپلینگ | تجهیزات آتش‌نشانی و ایمنی</title>
+  <meta name="description" content="آریاکوپلینگ تامین‌کننده تخصصی کوپلینگ، شیلنگ، هیدرانت و تجهیزات کامل آتش‌نشانی و ایمنی صنعتی." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand:#c4161c;         /* Arya Coupling red (approx) */
-      --brand-2:#ff3b30;       /* accent highlight */
-      --ink:#121316;
-      --ink-2:#2a2d33;
-      --muted:#667085;
+      --brand:#c4161c;
+      --ink:#0f172a;
+      --muted:#4b5563;
       --bg:#ffffff;
       --bg-2:#f7f7f9;
-      --card:#ffffff;
-      --border:rgba(16,24,40,.12);
-      --shadow: 0 18px 50px rgba(16,24,40,.12);
-      --shadow-2: 0 10px 30px rgba(16,24,40,.10);
-      --radius: 22px;
-      --radius-2: 16px;
-      --container: 1180px;
+      --border:rgba(15,23,42,.08);
+      --radius:16px;
+      --shadow:0 12px 40px rgba(15,23,42,.12);
     }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: "Vazirmatn", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-      background:var(--bg);
-      line-height:1.75;
-      overflow-x:hidden;
-    }
-
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-    button, input, textarea{font-family:inherit}
-
-    /* Utilities */
-    .container{max-width:var(--container); margin:0 auto; padding:0 18px}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      background:rgba(255,255,255,.6);
-      backdrop-filter: blur(10px);
-      font-size:13px;
-      color:var(--ink-2);
-    }
-    .dot{width:8px; height:8px; border-radius:50%; background:var(--brand)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px;
-      border-radius:14px;
-      border:1px solid transparent;
-      background:var(--ink);
-      color:#fff;
-      cursor:pointer;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-      user-select:none;
-      white-space:nowrap;
-    }
-    .btn:hover{transform: translateY(-1px); box-shadow: var(--shadow-2)}
-    .btn:active{transform: translateY(0px)}
-    .btn--brand{background: linear-gradient(135deg, var(--brand), #8f0f13)}
-    .btn--ghost{
-      background:transparent;
-      border-color:var(--border);
-      color:var(--ink);
-    }
-    .btn--ghost:hover{background:rgba(16,24,40,.04)}
-    .kbd{
-      font-size:12px;
-      padding:2px 8px;
-      border:1px solid var(--border);
-      border-bottom-width:2px;
-      border-radius:10px;
-      background:#fff;
-      color:var(--muted);
-    }
-
-    .section{padding:72px 0}
-    .section--alt{background: linear-gradient(180deg, var(--bg-2), #fff)}
-    .h2{
-      font-size: clamp(22px, 2.6vw, 34px);
-      line-height:1.25;
-      margin:0 0 10px;
-      letter-spacing:-.2px;
-    }
-    .lead{color:var(--muted); margin:0 0 18px}
-    .grid{display:grid; gap:18px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 1px 0 rgba(16,24,40,.03);
-    }
-
-    /* Topbar */
-    .topbar{
-      border-bottom:1px solid var(--border);
-      background: rgba(255,255,255,.8);
-      backdrop-filter: blur(12px);
-      position:relative;
-      z-index:30;
-    }
-    .topbar-inner{
-      display:flex; gap:14px; align-items:center; justify-content:space-between;
-      padding:10px 0;
-      font-size:13px; color:var(--muted);
-    }
-    .topbar-left, .topbar-right{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-    .topbar a{color:var(--ink-2)}
-    .sep{opacity:.35}
-
-    /* Header / Nav */
-    .header{
-      position:sticky; top:0;
-      z-index:40;
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(16px);
-      border-bottom:1px solid transparent;
-      transition: border-color .2s ease, background .2s ease;
-    }
-    .header.is-scrolled{
-      border-bottom-color: var(--border);
-      background: rgba(255,255,255,.92);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:12px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 220px;
-    }
-    .logo{
-      width:44px; height:44px;
-      border-radius:16px;
-      background: radial-gradient(circle at 30% 30%, #ff6b61, var(--brand) 60%, #7e0b0f);
-      box-shadow: 0 12px 26px rgba(196,22,28,.22);
-      position:relative;
-      overflow:hidden;
-    }
-    .logo:after{
-      content:"";
-      position:absolute; inset:-40%;
-      background: conic-gradient(from 200deg, rgba(255,255,255,.0), rgba(255,255,255,.22), rgba(255,255,255,0));
-      animation: shine 6s linear infinite;
-    }
-    @keyframes shine{
-      from{transform: rotate(0deg)}
-      to{transform: rotate(360deg)}
-    }
-    .brand-title{display:flex; flex-direction:column; line-height:1.2}
-    .brand-title strong{font-size:14px}
-    .brand-title span{font-size:12px; color:var(--muted)}
-
-    .nav-links{
-      display:flex; align-items:center; gap:14px;
-      font-size:14px;
-      color:var(--ink-2);
-    }
-    .nav-links a{
-      padding:10px 10px;
-      border-radius:12px;
-      transition: background .15s ease, color .15s ease;
-    }
-    .nav-links a:hover{background:rgba(16,24,40,.04)}
-    .nav-cta{display:flex; gap:10px; align-items:center}
-
-    .menu-btn{
-      display:none;
-      width:42px; height:42px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#fff;
-      cursor:pointer;
-    }
-    .menu-btn svg{width:20px; height:20px; margin:auto; display:block}
-
-    /* Mobile Drawer */
-    .drawer{
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.36);
-      opacity:0; pointer-events:none;
-      transition: opacity .2s ease;
-      z-index:60;
-    }
-    .drawer.open{opacity:1; pointer-events:auto}
-    .drawer-panel{
-      position:absolute; top:0; bottom:0; right:0;
-      width:min(420px, 92vw);
-      background:#fff;
-      border-left:1px solid var(--border);
-      padding:18px;
-      transform: translateX(12px);
-      transition: transform .2s ease;
-      display:flex; flex-direction:column; gap:14px;
-    }
-    .drawer.open .drawer-panel{transform: translateX(0)}
-    .drawer-head{display:flex; align-items:center; justify-content:space-between}
-    .drawer-nav{display:flex; flex-direction:column; gap:8px}
-    .drawer-nav a{padding:12px 12px; border-radius:14px; border:1px solid var(--border)}
-    .drawer-nav a:hover{background:rgba(16,24,40,.04)}
-    .drawer-foot{margin-top:auto; display:flex; gap:10px; flex-wrap:wrap}
-
-    /* Hero (Rollpark-ish vibe: illustration + structured sections) */
-    .hero{
-      position:relative;
-      padding: 44px 0 30px;
-      overflow:hidden;
-    }
-    .hero:before{
-      content:"";
-      position:absolute; inset:-20%;
-      background:
-        radial-gradient(circle at 80% 10%, rgba(196,22,28,.16), rgba(196,22,28,0) 45%),
-        radial-gradient(circle at 10% 40%, rgba(16,24,40,.10), rgba(16,24,40,0) 45%),
-        radial-gradient(circle at 50% 90%, rgba(255,59,48,.10), rgba(255,59,48,0) 55%);
-      pointer-events:none;
-      filter:saturate(1.1);
-    }
-    .hero-inner{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap:22px;
-      align-items:center;
-      position:relative;
-      z-index:1;
-    }
-    .hero h1{
-      font-size: clamp(28px, 3.5vw, 46px);
-      line-height:1.15;
-      margin:12px 0 12px;
-      letter-spacing:-.6px;
-    }
-    .hero p{color:var(--muted); margin:0 0 18px; font-size:16px}
-    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .hero-meta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .meta-chip{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.7);
-      backdrop-filter: blur(12px);
-      font-size:13px;
-      color:var(--ink-2);
-    }
-    .meta-chip b{color:var(--ink)}
-    .hero-art{
-      position:relative;
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.8), #fff);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      min-height: 420px;
-      display:flex;
-      align-items:stretch;
-    }
-    .hero-art .art-bg{
-      position:absolute; inset:0;
-      background:
-        radial-gradient(circle at 20% 15%, rgba(196,22,28,.14), rgba(196,22,28,0) 45%),
-        radial-gradient(circle at 80% 85%, rgba(16,24,40,.10), rgba(16,24,40,0) 55%),
-        repeating-linear-gradient(45deg, rgba(16,24,40,.03), rgba(16,24,40,.03) 10px, rgba(255,255,255,0) 10px, rgba(255,255,255,0) 22px);
-      opacity:.9;
-    }
-    .hero-art .art-inner{
-      position:relative;
-      z-index:1;
-      padding:16px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      width:100%;
-    }
-    .art-top{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding:10px 12px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(12px);
-      font-size:13px;
-      color:var(--muted);
-    }
-    .art-top .status{
-      display:flex; align-items:center; gap:8px; color:var(--ink-2);
-    }
-    .art-top .status i{
-      width:10px; height:10px; border-radius:50%;
-      background: #14b8a6;
-      box-shadow: 0 0 0 4px rgba(20,184,166,.16);
-    }
-
-    .art-mid{
-      flex:1;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      align-items:stretch;
-    }
-    .mini{
-      border-radius:18px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.8);
-      backdrop-filter: blur(10px);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-    .mini .mini-head{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 12px;
-      font-size:13px;
-      color:var(--ink-2);
-      border-bottom:1px solid rgba(16,24,40,.08);
-    }
-    .mini .mini-head small{color:var(--muted)}
-    .mini .mini-body{padding:12px}
-    .bar{
-      height:10px;
-      border-radius:999px;
-      background: rgba(16,24,40,.08);
-      overflow:hidden;
-    }
-    .bar > span{
-      display:block;
-      height:100%;
-      width:60%;
-      background: linear-gradient(90deg, var(--brand), #ff6b61);
-      border-radius:999px;
-    }
-    .kpi{
-      display:flex; gap:10px; margin-top:10px; flex-wrap:wrap
-    }
-    .kpi .pill{background:#fff}
-
-    .hero-product{
-      border-radius:18px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(12px);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      grid-column: 1 / -1;
-    }
-    .hero-product .hp-head{
-      padding:10px 12px;
-      border-bottom:1px solid rgba(16,24,40,.08);
-      display:flex; align-items:center; justify-content:space-between;
-      font-size:13px;
-      color:var(--muted);
-    }
-    .hp-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:10px;
-      padding:12px;
-      align-items:stretch;
-    }
-    .prod{
-      border-radius:16px;
-      border:1px solid rgba(16,24,40,.10);
-      background:#fff;
-      overflow:hidden;
-      display:flex;
-      gap:10px;
-      padding:10px;
-      align-items:center;
-    }
-    .prod img{
-      width:52px; height:52px;
-      object-fit:cover;
-      border-radius:14px;
-      background: #fff;
-      border:1px solid rgba(16,24,40,.10);
-    }
-    .prod b{font-size:13px}
-    .prod span{font-size:12px; color:var(--muted); display:block; margin-top:2px}
-
-    /* Feature strip */
-    .strip{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-    }
-    .strip .s{
-      padding:14px;
-      border-radius: 18px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.7);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 1px 0 rgba(16,24,40,.03);
-    }
-    .s .i{
-      width:42px; height:42px;
-      border-radius:16px;
-      display:grid; place-items:center;
-      background: rgba(196,22,28,.10);
-      border:1px solid rgba(196,22,28,.18);
-      margin-bottom:10px;
-    }
-    .s b{display:block; margin-bottom:6px}
-    .s p{margin:0; color:var(--muted); font-size:13px; line-height:1.65}
-
-    /* Category cards */
-    .cat-grid{
-      grid-template-columns: repeat(4, 1fr);
-      gap:14px;
-      margin-top:20px;
-    }
-    .cat{
-      position:relative;
-      overflow:hidden;
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, #fff, #fff);
-      box-shadow: 0 1px 0 rgba(16,24,40,.03);
-      transition: transform .15s ease, box-shadow .15s ease;
-      min-height: 210px;
-    }
-    .cat:hover{transform: translateY(-2px); box-shadow: var(--shadow-2)}
-    .cat .bg{
-      position:absolute; inset:0;
-      background:
-        radial-gradient(circle at 70% 20%, rgba(196,22,28,.18), rgba(196,22,28,0) 50%),
-        radial-gradient(circle at 20% 90%, rgba(16,24,40,.10), rgba(16,24,40,0) 55%);
-      opacity:.9;
-    }
-    .cat .inner{
-      position:relative;
-      z-index:1;
-      padding:16px;
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-    .cat img{
-      width:84px; height:84px;
-      object-fit:cover;
-      border-radius: 18px;
-      background:#fff;
-      border:1px solid rgba(16,24,40,.10);
-    }
-    .cat b{font-size:15px}
-    .cat p{margin:0; color:var(--muted); font-size:13px}
-    .cat .arrow{
-      margin-top:auto;
-      display:flex; align-items:center; justify-content:space-between;
-      font-size:13px;
-      color:var(--ink-2);
-      padding-top:10px;
-      border-top:1px dashed rgba(16,24,40,.14);
-    }
-
-    /* How it works (timeline/steps, Rollpark vibe) */
-    .steps{
-      margin-top:18px;
-      grid-template-columns: 1fr 1fr;
-      align-items:stretch;
-    }
-    .step-card{padding:18px}
-    .step{
-      display:flex; gap:14px; padding:14px 0;
-      border-bottom:1px solid rgba(16,24,40,.08);
-    }
-    .step:last-child{border-bottom:none}
-    .num{
-      width:44px; height:44px;
-      border-radius: 16px;
-      display:grid; place-items:center;
-      background: rgba(196,22,28,.10);
-      border:1px solid rgba(196,22,28,.18);
-      color:var(--brand);
-      font-weight:800;
-    }
-    .step b{display:block; margin-bottom:4px}
-    .step p{margin:0; color:var(--muted); font-size:13px; line-height:1.7}
-
-    .illustration{
-      padding:18px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      position:relative;
-      overflow:hidden;
-    }
-    .illustration:before{
-      content:"";
-      position:absolute; inset:-30%;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(196,22,28,.16), rgba(196,22,28,0) 50%),
-        radial-gradient(circle at 80% 75%, rgba(16,24,40,.12), rgba(16,24,40,0) 58%);
-      pointer-events:none;
-    }
-    .illu-top{
-      position:relative;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-    }
-    .badge{
-      position:relative;
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius: 16px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.85);
-      backdrop-filter: blur(12px);
-      color:var(--ink-2);
-      font-size:13px;
-    }
-    .illusvg{
-      position:relative;
-      width:100%;
-      border-radius: 20px;
-      border:1px solid rgba(16,24,40,.10);
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(12px);
-      overflow:hidden;
-      box-shadow: 0 1px 0 rgba(16,24,40,.03);
-    }
-    .illusvg svg{width:100%; height:auto; display:block}
-
-    /* Industries */
-    .ind-grid{grid-template-columns: repeat(4, 1fr); margin-top:16px}
-    .ind{padding:16px}
-    .ind .tag{
-      display:inline-flex;
-      padding:6px 10px;
-      border-radius:999px;
-      background: rgba(196,22,28,.10);
-      border:1px solid rgba(196,22,28,.18);
-      font-size:12px;
-      color:var(--brand);
-      margin-bottom:8px;
-    }
-    .ind b{display:block; margin-bottom:6px}
-    .ind p{margin:0; color:var(--muted); font-size:13px}
-
-    /* Projects slider */
-    .slider{
-      margin-top:14px;
-      display:flex;
-      gap:14px;
-      align-items:stretch;
-    }
-    .slider-controls{
-      display:flex; gap:10px; justify-content:flex-start; margin-top:12px
-    }
-    .iconbtn{
-      width:42px; height:42px;
-      border-radius: 14px;
-      border:1px solid var(--border);
-      background:#fff;
-      display:grid; place-items:center;
-      cursor:pointer;
-      transition: transform .15s ease, background .15s ease;
-    }
-    .iconbtn:hover{background:rgba(16,24,40,.04); transform: translateY(-1px)}
-    .track{
-      overflow:hidden;
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background:#fff;
-      width:100%;
-    }
-    .track-inner{
-      display:flex;
-      gap:12px;
-      padding:12px;
-      transform: translateX(0);
-      transition: transform .35s ease;
-      will-change: transform;
-    }
-    .proj{
-      min-width: min(360px, 78vw);
-      border-radius: 20px;
-      border:1px solid rgba(16,24,40,.10);
-      overflow:hidden;
-      background: #fff;
-      display:flex;
-      flex-direction:column;
-    }
-    .proj .ph{
-      height:160px;
-      background:
-        radial-gradient(circle at 70% 20%, rgba(196,22,28,.18), rgba(196,22,28,0) 55%),
-        linear-gradient(135deg, rgba(16,24,40,.08), rgba(16,24,40,0));
-      display:flex;
-      align-items:flex-end;
-      padding:14px;
-      color:var(--ink-2);
-      position:relative;
-    }
-    .proj .ph:after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        repeating-linear-gradient(45deg, rgba(255,255,255,.0), rgba(255,255,255,.0) 12px, rgba(255,255,255,.15) 12px, rgba(255,255,255,.15) 22px);
-      opacity:.6;
-      pointer-events:none;
-    }
-    .proj .pb{padding:14px}
-    .proj b{display:block; margin-bottom:6px}
-    .proj p{margin:0; color:var(--muted); font-size:13px}
-
-    /* FAQ */
-    .faq{margin-top:16px}
-    details{
-      border:1px solid var(--border);
-      border-radius: 18px;
-      padding:12px 14px;
-      background:#fff;
-    }
-    details + details{margin-top:10px}
-    summary{
-      cursor:pointer;
-      list-style:none;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-      font-weight:700;
-      color:var(--ink-2);
-    }
-    summary::-webkit-details-marker{display:none}
-    .chev{transition: transform .2s ease}
-    details[open] .chev{transform: rotate(180deg)}
-    details p{margin:10px 0 0; color:var(--muted); font-size:13px}
-
-    /* CTA */
-    .cta{
-      padding:22px;
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .form{
-      display:grid; gap:10px;
-    }
-    .field{
-      display:flex; flex-direction:column; gap:6px;
-      font-size:13px; color:var(--muted);
-    }
-    .field input, .field textarea{
-      border:1px solid var(--border);
-      border-radius: 14px;
-      padding:12px 12px;
-      font-size:14px;
-      outline:none;
-      transition: border-color .15s ease, box-shadow .15s ease;
-      background:#fff;
-    }
-    .field textarea{min-height:110px; resize:vertical}
-    .field input:focus, .field textarea:focus{
-      border-color: rgba(196,22,28,.35);
-      box-shadow: 0 0 0 4px rgba(196,22,28,.10);
-    }
-    .cta-side{
-      border-radius: 20px;
-      border:1px solid rgba(16,24,40,.10);
-      background:
-        radial-gradient(circle at 20% 15%, rgba(196,22,28,.18), rgba(196,22,28,0) 55%),
-        linear-gradient(180deg, rgba(255,255,255,.92), #fff);
-      padding:16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      overflow:hidden;
-      position:relative;
-    }
-    .cta-side:after{
-      content:"";
-      position:absolute; inset:-30%;
-      background:
-        radial-gradient(circle at 80% 70%, rgba(16,24,40,.12), rgba(16,24,40,0) 55%),
-        repeating-linear-gradient(45deg, rgba(16,24,40,.03), rgba(16,24,40,.03) 10px, rgba(255,255,255,0) 10px, rgba(255,255,255,0) 22px);
-      pointer-events:none;
-    }
-    .cta-side > *{position:relative}
-    .info-line{
-      display:flex; align-items:flex-start; gap:10px;
-      padding:10px 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.85);
-      border:1px solid rgba(16,24,40,.10);
-      color:var(--ink-2);
-      font-size:13px;
-    }
-    .info-line svg{flex:0 0 auto; margin-top:2px}
-
-    /* Footer */
-    footer{
-      padding:40px 0 26px;
-      border-top:1px solid var(--border);
-      background: linear-gradient(180deg, #fff, var(--bg-2));
-    }
-    .foot-grid{
-      display:grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .foot h4{margin:0 0 10px; font-size:14px}
-    .foot a{display:block; padding:6px 0; color:var(--muted); font-size:13px}
-    .foot a:hover{color:var(--ink)}
-    .copy{
-      margin-top:18px;
-      display:flex; gap:10px; flex-wrap:wrap;
-      justify-content:space-between;
-      color:var(--muted);
-      font-size:13px;
-      border-top:1px solid rgba(16,24,40,.08);
-      padding-top:14px;
-    }
-
-    /* Reveal animation */
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease}
-    .reveal.in{opacity:1; transform: translateY(0)}
-    @media (prefers-reduced-motion: reduce){
-      html{scroll-behavior:auto}
-      .reveal{opacity:1; transform:none; transition:none}
-      .logo:after{animation:none}
-      .track-inner{transition:none}
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-inner{grid-template-columns: 1fr}
-      .hero-art{min-height: 420px}
-      .strip{grid-template-columns: 1fr 1fr}
-      .cat-grid{grid-template-columns: 1fr 1fr}
-      .steps{grid-template-columns: 1fr}
-      .ind-grid{grid-template-columns: 1fr 1fr}
-      .cta{grid-template-columns: 1fr}
-      .foot-grid{grid-template-columns: 1fr 1fr}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.8;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 18px}
+    .section{padding:76px 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(196,22,28,.1);color:var(--brand);font-weight:600;font-size:13px}
+    .h2{font-size:clamp(24px,3vw,34px);margin:0 0 10px;letter-spacing:-.3px}
+    .lead{color:var(--muted);margin:0 0 16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid transparent;background:linear-gradient(135deg,var(--brand),#940b0f);color:#fff;font-weight:700;box-shadow:0 8px 24px rgba(196,22,28,.28);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(196,22,28,.28)}
+    .btn-ghost{background:#fff;border-color:var(--border);color:var(--ink);box-shadow:none}
+    /* topbar & nav */
+    .topbar{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:50}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;font-size:13px;color:var(--muted);white-space:nowrap}
+    .sep{opacity:.45}
+    header{border-bottom:1px solid transparent;position:sticky;top:41px;z-index:40;background:#fff;transition:border-color .2s ease}
+    header.scrolled{border-color:var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:14px;background:radial-gradient(circle at 35% 35%,#ff9a9e,var(--brand) 60%,#7c0b0f);position:relative;overflow:hidden;box-shadow:0 10px 24px rgba(196,22,28,.24)}
+    .brand-title{line-height:1.2}
+    .brand-title strong{display:block;font-size:15px}
+    .brand-title span{font-size:12px;color:var(--muted)}
+    .nav-links{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+    .nav-links a{padding:10px 12px;border-radius:12px;transition:background .15s ease}
+    .nav-links a:hover{background:rgba(15,23,42,.04)}
+    /* hero */
+    .hero{padding:72px 0 40px;background:linear-gradient(180deg,#fff,#fef2f2)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+    .hero h1{margin:12px 0;font-size:clamp(30px,3.4vw,44px);line-height:1.15;letter-spacing:-.5px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .hero-media{border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
+    .hero-media img{width:100%;height:100%;object-fit:cover}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{padding:14px;border:1px solid var(--border);border-radius:14px;background:#fff;display:flex;flex-direction:column;gap:6px;text-align:center}
+    .stat strong{font-size:20px;color:var(--brand)}
+    /* products */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 0 rgba(15,23,42,.03);display:flex;flex-direction:column;gap:10px;transition:transform .15s ease, box-shadow .15s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:12px;background:rgba(15,23,42,.04);color:var(--muted);font-size:12px}
+    /* checklist */
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .list-item{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .dot{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--brand);box-shadow:0 0 0 6px rgba(196,22,28,.12)}
+    /* layout blocks */
+    .panel{border:1px solid var(--border);border-radius:18px;padding:20px;background:#fff;box-shadow:0 8px 28px rgba(15,23,42,.06)}
+    .stack{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:center}
+    /* footer */
+    footer{padding:32px 0 24px;background:var(--bg-2);border-top:1px solid var(--border)}
+    .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:16px}
+    .foot a{display:block;padding:6px 0;color:var(--muted);font-size:13px}
+    .copy{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap}
+    @media (max-width:1024px){
+      .hero-grid,.stack{grid-template-columns:1fr}
+      header{top:0}
+    }
+    @media (max-width:720px){
+      .topbar-inner{flex-direction:column;align-items:flex-start;white-space:normal}
       .nav-links{display:none}
-      .menu-btn{display:block}
-      .brand{min-width:auto}
-    }
-    @media (max-width: 560px){
-      .strip{grid-template-columns: 1fr}
-      .cat-grid{grid-template-columns: 1fr}
-      .ind-grid{grid-template-columns: 1fr}
-      .hp-grid{grid-template-columns: 1fr}
-      .topbar-inner{gap:10px}
-      .topbar-left{display:none}
+      .hero-stats{grid-template-columns:repeat(2,1fr)}
+      .list{grid-template-columns:1fr}
+      .foot-grid{grid-template-columns:1fr 1fr}
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"آریاکوپلینگ",
-    "url":"https://aryacoupling.com/",
-    "email":"info@aryacoupling.com",
-    "telephone":"+982176202045"
-  }
-  </script>
 </head>
-
 <body>
-  <!-- Topbar -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>آدرس دفتر مرکزی: فرمانیه، خیابان شهید لواسانی، تقاطع ابکوه چهارم، پلاک ۱۷۹ طبقه ۷</span>
-        <span class="sep">•</span>
-        <span>کارخانه: جاده آبعلی–جاجرود–سعیدآباد، بن‌بست ارس، پلاک ۹</span>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span>دفتر مرکزی: فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹</span>
+        <span class="sep">|</span>
+        <span>کارخانه: جاده آبعلی، بن‌بست ارس، پلاک ۹</span>
       </div>
-      <div class="topbar-right">
+      <div style="display:flex;gap:8px;align-items:center">
         <span>شنبه تا پنج‌شنبه ۷:۳۰ تا ۱۸</span>
-        <span class="sep">•</span>
-        <a href="#downloads">کاتالوگ</a>
-        <span class="sep">/</span>
-        <a href="#downloads">بروشور</a>
-        <span class="sep">/</span>
-        <a href="#downloads">رزومه</a>
-        <span class="sep">•</span>
-        <span class="kbd">FA</span>
-        <span class="kbd" style="opacity:.65">EN</span>
-        <span class="kbd" style="opacity:.65">AR</span>
+        <span class="sep">|</span>
+        <a href="#catalog">کاتالوگ و بروشور</a>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="header" id="header">
+  <header id="header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Arya Coupling Home">
+      <a class="brand" href="#top">
         <div class="logo" aria-hidden="true"></div>
         <div class="brand-title">
           <strong>آریاکوپلینگ</strong>
-          <span>طراح و تولیدکننده تجهیزات آتش‌نشانی</span>
+          <span>تجهیزات آتش‌نشانی</span>
         </div>
       </a>
-
-      <nav class="nav-links" aria-label="Navigation">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#products">محصولات</a>
-        <a href="#solutions">راهکارها</a>
-        <a href="#industries">صنایع</a>
-        <a href="#projects">پروژه‌ها</a>
-        <a href="#faq">سوالات متداول</a>
-        <a href="#contact">تماس</a>
+        <a href="#design">مزایا</a>
+        <a href="#catalog">دانلودها</a>
+        <a href="#contact">ارتباط</a>
       </nav>
-
-      <div class="nav-cta">
-        <a class="btn btn--ghost" href="#downloads">دانلود فایل‌ها</a>
-        <a class="btn btn--brand" href="#contact">درخواست مشاوره</a>
-
-        <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو" aria-controls="drawer" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="#121316" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
+      <a class="btn btn-ghost" href="#contact">درخواست پیش‌فاکتور</a>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="منوی موبایل">
-      <div class="drawer-head">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <div class="logo" style="width:40px;height:40px;border-radius:14px"></div>
-          <div>
-            <div style="font-weight:800; line-height:1.15">آریاکوپلینگ</div>
-            <div style="font-size:12px; color:var(--muted)">تجهیزات آتش‌نشانی</div>
-          </div>
-        </div>
-        <button class="iconbtn" id="closeDrawer" aria-label="بستن منو">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6l12 12M18 6L6 18" stroke="#121316" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="drawer-nav">
-        <a href="#products" data-close>محصولات</a>
-        <a href="#solutions" data-close>راهکارها</a>
-        <a href="#industries" data-close>صنایع</a>
-        <a href="#projects" data-close>پروژه‌ها</a>
-        <a href="#faq" data-close>سوالات متداول</a>
-        <a href="#contact" data-close>تماس با ما</a>
-      </nav>
-
-      <div class="drawer-foot">
-        <a class="btn btn--ghost" href="#downloads" data-close>دانلود کاتالوگ</a>
-        <a class="btn btn--brand" href="#contact" data-close>درخواست مشاوره</a>
-      </div>
-    </div>
-  </div>
-
   <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="reveal">
-          <span class="pill"><span class="dot"></span> دمو ۱ (استایل مدرن / الهام از رول‌پارک) — آماده برای ریدیزاین</span>
-          <h1>تجهیزات آتش‌نشانی «استاندارد»، با طراحی دقیق و تولید صنعتی</h1>
-          <p>
-            از <b>جعبه آتش‌نشانی</b> و <b>قرقره و شیلنگ</b> تا <b>اتصالات BS و STORZ</b>، <b>اسپرینکلر</b>، <b>نازل</b> و <b>شیرآلات</b> —
-            همه‌چیز برای اجرای ایمن و حرفه‌ای پروژه‌های ساختمانی و صنعتی.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn--brand" href="#products">
-              مشاهده دسته‌بندی محصولات
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <a class="btn btn--ghost" href="#contact">
-              استعلام و مشاوره سریع
-              <span class="kbd">۲۴h</span>
-            </a>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">تجهیزات اطفای حریق صنعتی و شهری</span>
+          <h1>کوپلینگ، شیلنگ و سامانه کامل آتش‌نشانی با استاندارد بین‌المللی</h1>
+          <p>آریاکوپلینگ تامین‌کننده و تولیدکننده تجهیزات تخصصی آتش‌نشانی برای صنایع نفت و گاز، ساختمان‌های مرتفع، کارخانجات و ناوگان شهری.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="#catalog">مشاهده کاتالوگ محصولات</a>
+            <a class="btn btn-ghost" href="#products">محصولات پرفروش</a>
           </div>
-
-          <div class="hero-meta">
-            <div class="meta-chip"><span class="dot"></span> <b>کنترل کیفیت</b> + انطباق با استانداردها</div>
-            <div class="meta-chip"><span class="dot" style="background:#14b8a6"></span> <b>قابل سفارشی‌سازی</b> ابعاد/رنگ/متریال</div>
-            <div class="meta-chip"><span class="dot" style="background:#6366f1"></span> <b>پشتیبانی پروژه</b> از طراحی تا اجرا</div>
-          </div>
-
-          <div class="strip">
-            <div class="s">
-              <div class="i" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke="var(--brand)" stroke-width="2"/></svg>
-              </div>
-              <b>ایمنی پروژه‌محور</b>
-              <p>انتخاب صحیح تجهیزات بر اساس کاربری، فشار، اقلیم و استاندارد.</p>
-            </div>
-            <div class="s">
-              <div class="i" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h16" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-              <b>کاتالوگ و دیتاشیت</b>
-              <p>اطلاعات فنی روشن برای تصمیم‌گیری سریع تیم‌های تاسیسات و HSE.</p>
-            </div>
-            <div class="s">
-              <div class="i" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="var(--brand)" stroke-width="2" stroke-linecap="round"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="var(--brand)" stroke-width="2"/></svg>
-              </div>
-              <b>تحویل به‌موقع</b>
-              <p>هماهنگ با زمان‌بندی پروژه‌ها، با پشتیبانی پس از تحویل.</p>
-            </div>
-            <div class="s">
-              <div class="i" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 3 6 6 6 10a6 6 0 0 1-12 0c0-4 3-7 6-10z" stroke="var(--brand)" stroke-width="2"/></svg>
-              </div>
-              <b>آماده فروشگاه آینده</b>
-              <p>ساختار این هوم‌پیج طوریه که فروشگاه آنلاین بعداً راحت اضافه می‌شه.</p>
-            </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>+۴۰</strong><span>مدل کوپلینگ و هیدرانت</span></div>
+            <div class="stat"><strong>۷۲ ساعت</strong><span>آمادگی ارسال فوری</span></div>
+            <div class="stat"><strong>۵ گواهی</strong><span>استاندارد و کنترل کیفیت</span></div>
           </div>
         </div>
-
-        <!-- Hero Art Panel -->
-        <div class="hero-art reveal" aria-label="پنل نمایشی محصولات و وضعیت">
-          <div class="art-bg" aria-hidden="true"></div>
-
-          <div class="art-inner">
-            <div class="art-top">
-              <div class="status"><i></i> وضعیت تولید: فعال / QC در جریان</div>
-              <div>نسخه دمو: <b style="color:var(--ink)">Home v1</b></div>
-            </div>
-
-            <div class="art-mid">
-              <div class="mini">
-                <div class="mini-head"><b>کیفیت و انطباق</b> <small>کنترل چندمرحله‌ای</small></div>
-                <div class="mini-body">
-                  <div class="bar" aria-hidden="true"><span style="width:82%"></span></div>
-                  <div class="kpi">
-                    <span class="pill"><span class="dot"></span> تست فشار</span>
-                    <span class="pill"><span class="dot"></span> آب‌بندی</span>
-                    <span class="pill"><span class="dot"></span> دوام</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mini">
-                <div class="mini-head"><b>پروژه‌های فعال</b> <small>در حال پیگیری</small></div>
-                <div class="mini-body">
-                  <div style="display:flex; gap:10px; flex-wrap:wrap">
-                    <span class="pill"><span class="dot" style="background:#6366f1"></span> برج‌ها</span>
-                    <span class="pill"><span class="dot" style="background:#14b8a6"></span> بیمارستان</span>
-                    <span class="pill"><span class="dot" style="background:#f59e0b"></span> مترو</span>
-                  </div>
-                  <div style="margin-top:10px; font-size:13px; color:var(--muted)">
-                    مسیر تصمیم‌گیری: نیازسنجی → انتخاب محصول → تولید → ارسال
-                  </div>
-                </div>
-              </div>
-
-              <div class="hero-product">
-                <div class="hp-head">
-                  <span>نمونه محصولات (تصاویر واقعی سایت)</span>
-                  <span style="color:var(--ink-2)">کلیک‌پذیر برای لینک‌دهی آینده</span>
-                </div>
-                <div class="hp-grid">
-                  <a class="prod" href="#products">
-                    <img alt="جعبه آتش نشانی" src="https://aryacoupling.com/wp-content/uploads/2023/10/DSC_6661-copy.jpg">
-                    <div><b>جعبه آتش‌نشانی</b><span>کابینت‌های استاندارد/سفارشی</span></div>
-                  </a>
-                  <a class="prod" href="#products">
-                    <img alt="اسپرینکلر" src="https://aryacoupling.com/wp-content/uploads/2021/03/sprinkler5.jpg">
-                    <div><b>اسپرینکلر</b><span>بالازن/پایین‌زن/دیواری</span></div>
-                  </a>
-                  <a class="prod" href="#products">
-                    <img alt="قرقره و شیلنگ" src="https://aryacoupling.com/wp-content/uploads/2021/02/DSC05295.jpg">
-                    <div><b>قرقره و شیلنگ</b><span>هوزریل و شیلنگ‌های صنعتی</span></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="art-top" style="justify-content:flex-start; gap:10px">
-              <span class="pill"><span class="dot"></span> سرعت اجرا</span>
-              <span class="pill"><span class="dot" style="background:#14b8a6"></span> سفارشی‌سازی</span>
-              <span class="pill"><span class="dot" style="background:#6366f1"></span> مستندسازی</span>
-            </div>
-          </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1484979045040-0ab3854b6cfe?auto=format&fit=crop&w=1400&q=80" alt="تجهیزات آتش‌نشانی" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- Products / Categories -->
-    <section class="section section--alt" id="products">
+    <section class="section" id="products">
       <div class="container">
-        <div class="reveal">
-          <h2 class="h2">دسته‌بندی محصولات آتش‌نشانی</h2>
-          <p class="lead">چیدمان این بخش دقیقاً برای ریدیزاین آینده (و افزودن فروشگاه) آماده شده: دسته‌بندی → محصول → دیتاشیت → استعلام.</p>
-        </div>
-
-        <div class="grid cat-grid">
-          <a class="cat reveal" href="#">
-            <div class="bg" aria-hidden="true"></div>
-            <div class="inner">
-              <img alt="Fire Cabinet" src="https://aryacoupling.com/wp-content/uploads/2023/10/DSC_6661-copy.jpg">
-              <b>جعبه آتش‌نشانی</b>
-              <p>کابینت تک/دوکابین، دکوراتیو، محوطه‌ای و سفارشی.</p>
-              <div class="arrow">
-                <span>مشاهده</span>
-                <span>←</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="cat reveal" href="#">
-            <div class="bg" aria-hidden="true"></div>
-            <div class="inner">
-              <img alt="Hose Reel" src="https://aryacoupling.com/wp-content/uploads/2021/02/DSC05295.jpg">
-              <b>قرقره و شیلنگ</b>
-              <p>هوزریل، شیلنگ تاشونده و تجهیزات جانبی.</p>
-              <div class="arrow"><span>مشاهده</span><span>←</span></div>
-            </div>
-          </a>
-
-          <a class="cat reveal" href="#">
-            <div class="bg" aria-hidden="true"></div>
-            <div class="inner">
-              <img alt="BS Fittings" src="https://aryacoupling.com/wp-content/uploads/2021/03/bs-coupling1.jpg">
-              <b>اتصالات BS</b>
-              <p>کوپلینگ‌ها و تبدیل‌ها برای کاربردهای استاندارد.</p>
-              <div class="arrow"><span>مشاهده</span><span>←</span></div>
-            </div>
-          </a>
-
-          <a class="cat reveal" href="#">
-            <div class="bg" aria-hidden="true"></div>
-            <div class="inner">
-              <img alt="STORZ Fittings" src="https://aryacoupling.com/wp-content/uploads/2021/03/1-3.jpg">
-              <b>اتصالات STORZ</b>
-              <p>اتصالات آلمانی مقاوم و دقیق برای پروژه‌های صنعتی.</p>
-              <div class="arrow"><span>مشاهده</span><span>←</span></div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works / Solutions -->
-    <section class="section" id="solutions">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">از نیاز پروژه تا انتخاب محصول؛ مسیر ساده و قابل‌پیگیری</h2>
-          <p class="lead">این بخش با استایل «اینفوگرافیک و مرحله‌ای» طراحی شده تا مثل رول‌پارک، روایت محصول/خدمت را سریع و جذاب منتقل کند.</p>
-        </div>
-
-        <div class="grid steps">
-          <div class="card step-card reveal">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <b>نیازسنجی و کاربری</b>
-                <p>نوع پروژه (مسکونی/تجاری/صنعتی)، فشار کاری، شرایط اقلیمی و الزامات HSE.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <b>پیشنهاد فنی (دیتاشیت‌محور)</b>
-                <p>انتخاب دسته محصول + مشخصات فنی + نقشه/ابعاد + پیشنهاد جایگذاری.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <b>تولید، کنترل کیفیت، بسته‌بندی</b>
-                <p>کنترل آب‌بندی، تست فشار، بررسی متریال و آماده‌سازی برای ارسال پروژه‌ای.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="num">4</div>
-              <div>
-                <b>تحویل و پشتیبانی</b>
-                <p>مستندسازی، گارانتی (در صورت فعال‌سازی) و پاسخ‌گویی پس از تحویل.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card illustration reveal">
-            <div class="illu-top">
-              <span class="badge"><span class="dot"></span> اینفوگرافیک محصول (نمونه)</span>
-              <span class="badge" style="color:var(--muted)">آماده جایگزینی با SVG/عکس‌های تبلیغات</span>
-            </div>
-
-            <div class="illusvg" aria-label="Illustration">
-              <!-- Simple inline illustration (placeholder) -->
-              <svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#ffffff"/>
-                    <stop offset="1" stop-color="#f3f4f6"/>
-                  </linearGradient>
-                  <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0">
-                    <stop offset="0" stop-color="#c4161c"/>
-                    <stop offset="1" stop-color="#ff6b61"/>
-                  </linearGradient>
-                  <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#101828" flood-opacity=".12"/>
-                  </filter>
-                </defs>
-
-                <rect x="28" y="28" width="804" height="464" rx="26" fill="url(#g1)" stroke="#d0d5dd"/>
-                <circle cx="130" cy="120" r="68" fill="#c4161c" opacity=".08"/>
-                <circle cx="720" cy="400" r="92" fill="#101828" opacity=".06"/>
-
-                <!-- Cabinet -->
-                <g filter="url(#sh)">
-                  <rect x="132" y="118" width="270" height="310" rx="22" fill="#fff" stroke="#d0d5dd"/>
-                  <rect x="154" y="148" width="226" height="250" rx="18" fill="#fff" stroke="#e5e7eb"/>
-                  <rect x="132" y="118" width="270" height="52" rx="22" fill="url(#g2)" opacity=".92"/>
-                  <text x="160" y="152" font-family="Vazirmatn, sans-serif" font-size="18" fill="#fff">Fire Cabinet</text>
-                  <circle cx="360" cy="274" r="46" fill="#c4161c" opacity=".10" stroke="#fca5a5"/>
-                  <path d="M338 274h44" stroke="#c4161c" stroke-width="6" stroke-linecap="round"/>
-                  <path d="M360 252v44" stroke="#c4161c" stroke-width="6" stroke-linecap="round"/>
-                </g>
-
-                <!-- Hose reel -->
-                <g filter="url(#sh)">
-                  <rect x="460" y="170" width="300" height="200" rx="24" fill="#fff" stroke="#d0d5dd"/>
-                  <circle cx="610" cy="270" r="74" fill="#c4161c" opacity=".10"/>
-                  <circle cx="610" cy="270" r="56" fill="none" stroke="#c4161c" stroke-width="10" opacity=".9"/>
-                  <circle cx="610" cy="270" r="26" fill="#101828" opacity=".08" stroke="#d0d5dd"/>
-                  <path d="M610 244v52" stroke="#c4161c" stroke-width="6" stroke-linecap="round"/>
-                  <path d="M584 270h52" stroke="#c4161c" stroke-width="6" stroke-linecap="round"/>
-                  <rect x="480" y="190" width="120" height="36" rx="18" fill="url(#g2)" opacity=".92"/>
-                  <text x="500" y="214" font-family="Vazirmatn, sans-serif" font-size="14" fill="#fff">Hose Reel</text>
-                </g>
-
-                <!-- Callouts -->
-                <g font-family="Vazirmatn, sans-serif" fill="#344054" font-size="14">
-                  <path d="M402 210 C430 210, 450 210, 470 216" stroke="#c4161c" stroke-width="2" fill="none"/>
-                  <rect x="410" y="184" rx="14" ry="14" width="180" height="44" fill="#fff" stroke="#e5e7eb"/>
-                  <text x="424" y="212">قابل سفارشی‌سازی (رنگ/ابعاد)</text>
-
-                  <path d="M598 360 C598 400, 560 420, 530 432" stroke="#101828" stroke-width="2" fill="none" opacity=".7"/>
-                  <rect x="420" y="420" rx="14" ry="14" width="260" height="44" fill="#fff" stroke="#e5e7eb"/>
-                  <text x="434" y="448">تست فشار، آب‌بندی و کنترل کیفیت چندمرحله‌ای</text>
-                </g>
-              </svg>
-            </div>
-
-            <div style="display:flex; gap:10px; flex-wrap:wrap">
-              <span class="pill"><span class="dot"></span> شفافیت اطلاعات</span>
-              <span class="pill"><span class="dot" style="background:#14b8a6"></span> تصمیم سریع</span>
-              <span class="pill"><span class="dot" style="background:#6366f1"></span> آماده فروشگاه</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Industries -->
-    <section class="section section--alt" id="industries">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">راهکارها برای صنایع مختلف</h2>
-          <p class="lead">کاربر سریع بفهمه «برای پروژه من چی دارید؟» — دقیقاً همون کاری که یک هوم‌پیج مدرن باید بکنه.</p>
-        </div>
-
-        <div class="grid ind-grid">
-          <div class="card ind reveal">
-            <span class="tag">ساختمان‌های بلندمرتبه</span>
-            <b>برج‌ها و مجتمع‌ها</b>
-            <p>انتخاب تجهیزات با توجه به فشار، طول مسیر و دسترسی طبقات.</p>
-          </div>
-          <div class="card ind reveal">
-            <span class="tag">زیرساخت شهری</span>
-            <b>مترو و پایانه‌ها</b>
-            <p>محیط‌های پرتردد با نیاز به دوام، استاندارد و سرویس‌پذیری.</p>
-          </div>
-          <div class="card ind reveal">
-            <span class="tag">حساس و حیاتی</span>
-            <b>بیمارستان و هتل</b>
-            <p>هماهنگی با معماری، زیبایی، و تجهیزات قابل‌اعتماد با سرویس سریع.</p>
-          </div>
-          <div class="card ind reveal">
-            <span class="tag">صنعت سنگین</span>
-            <b>کارخانه و پالایشگاه</b>
-            <p>مقاومت در شرایط سخت، خوردگی، و کارکرد پایدار در اقلیم‌های مختلف.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Slider -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">پروژه‌ها و تجربه‌های اجرایی</h2>
-          <p class="lead">اسلایدر مینیمال برای نمونه‌کارها/پروژه‌ها. بعداً می‌تونی به «گالری» یا «پروژه‌ها» لینک بدی.</p>
-        </div>
-
-        <div class="slider reveal">
-          <div class="track" aria-label="Projects slider">
-            <div class="track-inner" id="track">
-              <article class="proj">
-                <div class="ph"><b style="position:relative; z-index:1">پروژه ساختمانی (نمونه)</b></div>
-                <div class="pb">
-                  <b>اجرای تجهیزات آتش‌نشانی برج مسکونی</b>
-                  <p>جعبه‌های آتش‌نشانی + هوزریل + اتصالات استاندارد — تحویل مرحله‌ای.</p>
-                </div>
-              </article>
-              <article class="proj">
-                <div class="ph"><b style="position:relative; z-index:1">پروژه زیرساختی (نمونه)</b></div>
-                <div class="pb">
-                  <b>تجهیزات مقاوم برای محیط پرتردد</b>
-                  <p>تاکید بر دوام، سرویس‌پذیری و اطلاعات فنی شفاف برای تیم بهره‌بردار.</p>
-                </div>
-              </article>
-              <article class="proj">
-                <div class="ph"><b style="position:relative; z-index:1">پروژه صنعتی (نمونه)</b></div>
-                <div class="pb">
-                  <b>راهکار صنعتی با استاندارد و QC</b>
-                  <p>انتخاب متریال مناسب، تست‌ها و پشتیبانی پس از تحویل پروژه.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-controls reveal">
-          <button class="iconbtn" id="prev" aria-label="قبلی">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <button class="iconbtn" id="next" aria-label="بعدی">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <span class="pill"><span class="dot"></span> بعداً می‌تونی این بخش رو به گالری/پروژه‌های واقعی وصل کنی</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section--alt" id="faq">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">سوالات متداول</h2>
-          <p class="lead">برای افزایش اعتماد و پاسخ سریع (و البته کمک به سئو) — دقیق، کوتاه، کاربردی.</p>
-        </div>
-
-        <div class="faq grid">
-          <details class="reveal">
-            <summary>
-              چطور مناسب‌ترین محصول برای پروژه‌ام را انتخاب کنم؟
-              <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p>کاربری پروژه، فشار کاری، شرایط اقلیمی و نیازهای HSE را مشخص کنید؛ سپس از طریق فرم مشاوره، پیشنهاد فنی دیتاشیت‌محور دریافت می‌کنید.</p>
-          </details>
-
-          <details class="reveal">
-            <summary>
-              امکان سفارشی‌سازی رنگ/ابعاد/متریال وجود دارد؟
-              <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p>بله. بسیاری از محصولات (به‌خصوص کابینت‌ها) با توجه به معماری و نیاز پروژه قابل سفارشی‌سازی هستند.</p>
-          </details>
-
-          <details class="reveal">
-            <summary>
-              فروشگاه آنلاین دارید؟
-              <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p>در حال حاضر تمرکز روی معرفی محصول و استعلام/مشاوره است؛ اما ساختار این سایت برای اضافه‌شدن فروشگاه در آینده آماده طراحی شده است.</p>
-          </details>
-
-          <details class="reveal">
-            <summary>
-              چطور کاتالوگ و بروشور را دریافت کنم؟
-              <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#121316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p>از بخش «دانلودها» در همین صفحه استفاده کنید یا از طریق فرم، درخواست ارسال فایل‌ها را ثبت کنید.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Downloads anchor (placeholder) -->
-    <section class="section" id="downloads">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="h2">دانلودها</h2>
-          <p class="lead">اینجا جای دکمه‌های دانلود «کاتالوگ / بروشور / رزومه» است (لینک‌ها را بعداً ست می‌کنیم).</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn btn--ghost" href="#" aria-label="دانلود کاتالوگ">دانلود کاتالوگ</a>
-            <a class="btn btn--ghost" href="#" aria-label="دانلود بروشور">دانلود بروشور</a>
-            <a class="btn btn--ghost" href="#" aria-label="دانلود رزومه">دانلود رزومه</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / CTA -->
-    <section class="section section--alt" id="contact">
-      <div class="container">
-        <div class="card cta reveal">
+        <div class="stack" style="margin-bottom:24px">
           <div>
-            <h2 class="h2" style="margin-top:0">درخواست مشاوره / استعلام سریع</h2>
-            <p class="lead">نام و شماره را وارد کنید؛ تیم پشتیبانی فروش برای راهنمایی و پیشنهاد فنی با شما تماس می‌گیرد.</p>
-
-            <form class="form" onsubmit="event.preventDefault(); toast('درخواست شما ثبت شد. (دمو)');">
-              <div class="grid" style="grid-template-columns: 1fr 1fr; gap:10px">
-                <label class="field">
-                  نام و نام خانوادگی
-                  <input required placeholder="مثلاً: علی رضایی" />
-                </label>
-                <label class="field">
-                  شماره تماس
-                  <input required inputmode="tel" placeholder="مثلاً: 09xxxxxxxxx" />
-                </label>
-              </div>
-              <label class="field">
-                توضیحات پروژه (اختیاری)
-                <textarea placeholder="نوع پروژه، شهر، تعداد طبقات، نیازهای خاص..."></textarea>
-              </label>
-
-              <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
-                <button class="btn btn--brand" type="submit">ثبت درخواست</button>
-                <a class="btn btn--ghost" href="tel:+982176202045">تماس مستقیم: 021-76202045</a>
-                <span class="pill"><span class="dot" style="background:#14b8a6"></span> پاسخ‌گویی سریع</span>
-              </div>
-            </form>
+            <h2 class="h2">محصولات کلیدی آریاکوپلینگ</h2>
+            <p class="lead">انتخابی کامل از تجهیزات فشارقوی، آماده تحویل و قابل سفارشی‌سازی برای پروژه‌های شهری و صنعتی.</p>
+            <div class="list">
+              <div class="list-item"><span class="dot"></span><span>کوپلینگ آلومینیومی و برنجی با آب‌بندی مقاوم در برابر فشار بالا</span></div>
+              <div class="list-item"><span class="dot"></span><span>شیلنگ برزنتی و لاستیکی در سایزهای متنوع تا ۳ اینچ</span></div>
+              <div class="list-item"><span class="dot"></span><span>هیدرانت، نازل، قرقره شیلنگ و لوله‌های رایزر با پوشش ضدخوردگی</span></div>
+              <div class="list-item"><span class="dot"></span><span>جعبه آتش‌نشانی، اسپرینکلر، خاموش‌کننده و تجهیزات اعلام حریق</span></div>
+            </div>
           </div>
-
-          <aside class="cta-side" aria-label="اطلاعات تماس">
-            <div class="info-line">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.59 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.11a2 2 0 0 1 2.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0 1 22 16.92z" stroke="#121316" stroke-width="2"/>
-              </svg>
-              <div>
-                <b>تلفن</b><br/>
-                021-76202045 — 09912052548
+          <div class="panel">
+            <div class="grid">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1582719478318-82c2f6d93dc1?auto=format&fit=crop&w=800&q=80" alt="کوپلینگ آتش‌نشانی">
+                <div class="chip">کوپلینگ</div>
+                <strong>کوپلینگ آلومینیومی و برنجی</strong>
+                <p class="lead" style="margin:0">از سایز ۱.۵ تا ۴ اینچ، رزوه DIN و BS با تست فشار.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=800&q=80" alt="شیلنگ آتش نشانی">
+                <div class="chip">شیلنگ</div>
+                <strong>شیلنگ برزنتی فشارقوی</strong>
+                <p class="lead" style="margin:0">آستر مقاوم در برابر UV، مناسب عملیات شهری و صنعتی.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="هیدرانت">
+                <div class="chip">هیدرانت</div>
+                <strong>هیدرانت و رایزر آماده نصب</strong>
+                <p class="lead" style="margin:0">بدنه داکتیل با پوشش اپوکسی و قطعات یدکی کامل.</p>
+              </div>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="سیستم ایمنی">
+                <div class="chip">ایمنی</div>
+                <strong>کیت کامل ایمنی و اعلام حریق</strong>
+                <p class="lead" style="margin:0">جعبه حریق، خاموش‌کننده، هشداردهنده و سنسور دود.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="info-line">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 4h16v16H4V4z" stroke="#121316" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="#121316" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <div>
-                <b>ایمیل</b><br/>
-                info@aryacoupling.com
-              </div>
+    <section class="section" id="design" style="background:var(--bg-2)">
+      <div class="container stack">
+        <div>
+          <span class="pill">مهندسی برای پایداری و سرعت پاسخ</span>
+          <h2 class="h2">UX مینیمال، نصب سریع، اطمینان بالا</h2>
+          <p class="lead">چیدمان گریدی محصولات، دسترسی سریع به کاتالوگ و انتخاب سایز، بدون اسکرول کند یا انیمیشن‌های سنگین.</p>
+          <div class="list">
+            <div class="list-item"><span class="dot"></span><span>مسیر تماس و پیش‌فاکتور همیشه قابل دسترس در بالای صفحه</span></div>
+            <div class="list-item"><span class="dot"></span><span>فیلتراسیون ساده بر اساس دسته‌بندی و سایز</span></div>
+            <div class="list-item"><span class="dot"></span><span>تصاویر واقعی از تجهیزات آتش‌نشانی برای اطمینان مشتری</span></div>
+            <div class="list-item"><span class="dot"></span><span>گرید منظم برای مقایسه مشخصات فنی هر محصول</span></div>
+          </div>
+        </div>
+        <div class="panel" style="background:#fff">
+          <h3 style="margin:0 0 12px">پروژه‌های منتخب</h3>
+          <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+            <div class="card" style="padding:12px">
+              <div class="chip">صنعتی</div>
+              <strong>سایت پتروشیمی ماهشهر</strong>
+              <p class="lead" style="margin:0">تجهیز کامل شبکه هیدرانت و کوپلینگ ضدخوردگی.</p>
             </div>
+            <div class="card" style="padding:12px">
+              <div class="chip">شهری</div>
+              <strong>ایستگاه‌های آتش‌نشانی تهران</strong>
+              <p class="lead" style="margin:0">نوسازی شیلنگ و نازل فشارقوی در ۱۲ ایستگاه.</p>
+            </div>
+            <div class="card" style="padding:12px">
+              <div class="chip">ساختمان</div>
+              <strong>برج‌های اداری شمال تهران</strong>
+              <p class="lead" style="margin:0">نصب جعبه حریق، رایزر و سیستم اعلام.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="info-line">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" stroke="#121316" stroke-width="2"/>
-                <path d="M12 10a2.2 2.2 0 1 0 0-4.4A2.2 2.2 0 0 0 12 10z" stroke="#121316" stroke-width="2"/>
-              </svg>
-              <div>
-                <b>آدرس دفتر مرکزی</b><br/>
-                فرمانیه، خیابان شهید لواسانی، تقاطع ابکوه چهارم، پلاک ۱۷۹ طبقه ۷
-              </div>
-            </div>
+    <section class="section" id="catalog">
+      <div class="container stack" style="gap:14px">
+        <div class="panel">
+          <h2 class="h2">کاتالوگ و دیتاشیت</h2>
+          <p class="lead">مشخصات دقیق فشار کاری، متریال، تست‌ها و قطعات یدکی برای هر محصول.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+            <a class="btn" href="#">دانلود کاتالوگ</a>
+            <a class="btn btn-ghost" href="#">دریافت بروشور PDF</a>
+          </div>
+        </div>
+        <div class="panel" style="background:linear-gradient(135deg,#0f172a,#121a2f);color:#fff">
+          <h3 class="h2" style="color:#fff;font-size:24px">مشاوره فوری</h3>
+          <p class="lead" style="color:#e2e8f0">اندازه، فشار کاری و استاندارد مورد نیاز را اعلام کنید تا پیشنهاد فنی و پیش‌فاکتور ارسال شود.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="tel:+982176202045">تماس ۰۲۱-۷۶۲۰۲۰۴۵</a>
+            <a class="btn btn-ghost" href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="info-line">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 6v6l4 2" stroke="#121316" stroke-width="2" stroke-linecap="round"/>
-                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="#121316" stroke-width="2"/>
-              </svg>
-              <div>
-                <b>ساعت کاری</b><br/>
-                شنبه تا پنج‌شنبه ۷:۳۰ تا ۱۸
-              </div>
-            </div>
-          </aside>
+    <section class="section" id="contact" style="padding-top:40px">
+      <div class="container panel" style="text-align:center">
+        <span class="pill" style="margin-bottom:10px">ارتباط مستقیم با تیم فنی</span>
+        <h2 class="h2">برای سفارش یا استعلام موجودی تماس بگیرید</h2>
+        <p class="lead">اطلاعات پروژه یا لیست اقلام را ارسال کنید تا سریع‌ترین زمان تحویل و قیمت به شما اعلام شود.</p>
+        <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn" href="tel:+982176202045">۰۲۱-۷۶۲۰۲۰۴۵</a>
+          <a class="btn btn-ghost" href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
         </div>
       </div>
     </section>
@@ -1393,136 +264,47 @@
     <div class="container">
       <div class="foot-grid">
         <div class="foot">
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
-            <div class="logo" style="width:40px;height:40px;border-radius:14px"></div>
-            <div>
-              <div style="font-weight:900">آریاکوپلینگ</div>
-              <div style="font-size:12px; color:var(--muted)">تجهیزات آتش‌نشانی | طراحی و تولید</div>
+          <div class="brand" style="margin-bottom:10px">
+            <div class="logo" style="width:36px;height:36px"></div>
+            <div class="brand-title">
+              <strong>آریاکوپلینگ</strong>
+              <span>تجهیزات آتش‌نشانی</span>
             </div>
           </div>
-          <div class="pill"><span class="dot"></span> آماده توسعه فروشگاه آنلاین در آینده</div>
+          <p style="margin:0;color:var(--muted)">تهران، فرمانیه، خیابان شهید لواسانی، پلاک ۱۷۹، طبقه ۷</p>
         </div>
-
         <div class="foot">
           <h4>محصولات</h4>
-          <a href="#products">جعبه آتش‌نشانی</a>
-          <a href="#products">قرقره و شیلنگ</a>
-          <a href="#products">اتصالات BS / STORZ</a>
-          <a href="#products">اسپرینکلر و نازل</a>
+          <a href="#products">کوپلینگ و شیلنگ</a>
+          <a href="#products">هیدرانت و نازل</a>
+          <a href="#products">جعبه و اسپرینکلر</a>
         </div>
-
-        <div class="foot">
-          <h4>دسترسی سریع</h4>
-          <a href="#solutions">راهکارها</a>
-          <a href="#projects">پروژه‌ها</a>
-          <a href="#faq">سوالات متداول</a>
-          <a href="#contact">تماس</a>
-        </div>
-
         <div class="foot">
           <h4>دانلودها</h4>
-          <a href="#downloads">کاتالوگ</a>
-          <a href="#downloads">بروشور</a>
-          <a href="#downloads">رزومه</a>
+          <a href="#catalog">کاتالوگ</a>
+          <a href="#catalog">بروشور</a>
+          <a href="#catalog">گواهی کیفیت</a>
+        </div>
+        <div class="foot">
+          <h4>ارتباط</h4>
+          <a href="tel:+982176202045">۰۲۱-۷۶۲۰۲۰۴۵</a>
+          <a href="mailto:info@aryacoupling.com">info@aryacoupling.com</a>
+          <a href="#contact">فرم درخواست</a>
         </div>
       </div>
-
       <div class="copy">
-        <span>© تمامی حقوق متعلق به آریاکوپلینگ است.</span>
-        <span>UI Demo v1 — آماده برای نسخه‌های بعدی (۲ دمو دیگر)</span>
+        <span>© ۱۴۰۳ آریاکوپلینگ</span>
+        <span>تمام حقوق محفوظ است.</span>
       </div>
     </div>
   </footer>
 
-  <!-- Toast -->
-  <div id="toast" style="
-    position:fixed; left:18px; bottom:18px;
-    background:rgba(17,19,22,.92); color:#fff;
-    padding:12px 14px; border-radius:16px;
-    border:1px solid rgba(255,255,255,.12);
-    box-shadow: 0 16px 40px rgba(0,0,0,.20);
-    opacity:0; transform: translateY(10px);
-    transition: opacity .2s ease, transform .2s ease;
-    z-index:1000;
-    font-size:13px;
-  " aria-live="polite"></div>
-
   <script>
-    // Header scroll state
-    const header = document.getElementById('header');
-    const setHeader = () => {
-      if (window.scrollY > 6) header.classList.add('is-scrolled');
-      else header.classList.remove('is-scrolled');
-    };
-    window.addEventListener('scroll', setHeader, {passive:true});
-    setHeader();
-
-    // Reveal on view
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      })
-    }, {threshold: .12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Mobile drawer
-    const drawer = document.getElementById('drawer');
-    const menuBtn = document.getElementById('menuBtn');
-    const closeDrawer = document.getElementById('closeDrawer');
-
-    const openDrawer = () => {
-      drawer.classList.add('open');
-      drawer.setAttribute('aria-hidden','false');
-      menuBtn.setAttribute('aria-expanded','true');
-      document.body.style.overflow = 'hidden';
-    };
-    const closeIt = () => {
-      drawer.classList.remove('open');
-      drawer.setAttribute('aria-hidden','true');
-      menuBtn.setAttribute('aria-expanded','false');
-      document.body.style.overflow = '';
-    };
-
-    menuBtn?.addEventListener('click', openDrawer);
-    closeDrawer?.addEventListener('click', closeIt);
-    drawer?.addEventListener('click', (e)=>{ if(e.target === drawer) closeIt(); });
-    document.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', closeIt));
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && drawer.classList.contains('open')) closeIt(); });
-
-    // Projects slider
-    const track = document.getElementById('track');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    let index = 0;
-
-    const slide = (dir) => {
-      const items = [...track.children];
-      const step = items[0].getBoundingClientRect().width + 12; // card width + gap
-      index = Math.max(0, Math.min(items.length - 1, index + dir));
-      // RTL: move negative to show next cards correctly
-      track.style.transform = `translateX(${index * step}px)`;
-    };
-
-    prev?.addEventListener('click', ()=>slide(-1));
-    next?.addEventListener('click', ()=>slide(1));
-
-    // Toast
-    const toastEl = document.getElementById('toast');
-    let toastT = null;
-    window.toast = (msg) => {
-      if(!toastEl) return;
-      toastEl.textContent = msg;
-      toastEl.style.opacity = '1';
-      toastEl.style.transform = 'translateY(0)';
-      clearTimeout(toastT);
-      toastT = setTimeout(()=>{
-        toastEl.style.opacity = '0';
-        toastEl.style.transform = 'translateY(10px)';
-      }, 2200);
-    };
+    const headerEl=document.getElementById('header');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>10) headerEl.classList.add('scrolled');
+      else headerEl.classList.remove('scrolled');
+    });
   </script>
 </body>
 </html>

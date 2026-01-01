@@ -59,6 +59,8 @@
     .stat strong{font-size:20px;color:var(--brand)}
     /* products */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .grid.tight{gap:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
     .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 1px 0 rgba(15,23,42,.03);display:flex;flex-direction:column;gap:10px;transition:transform .15s ease, box-shadow .15s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
     .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:12px;background:rgba(15,23,42,.04);color:var(--muted);font-size:12px}
@@ -69,6 +71,7 @@
     /* layout blocks */
     .panel{border:1px solid var(--border);border-radius:18px;padding:20px;background:#fff;box-shadow:0 8px 28px rgba(15,23,42,.06)}
     .stack{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:center}
+    .stack-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:start}
     /* footer */
     footer{padding:32px 0 24px;background:var(--bg-2);border-top:1px solid var(--border)}
     .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:16px}
@@ -147,44 +150,72 @@
 
     <section class="section" id="products">
       <div class="container">
-        <div class="stack" style="margin-bottom:24px">
+        <div class="stack" style="margin-bottom:28px;gap:20px">
           <div>
-            <h2 class="h2">محصولات کلیدی آریاکوپلینگ</h2>
-            <p class="lead">انتخابی کامل از تجهیزات فشارقوی، آماده تحویل و قابل سفارشی‌سازی برای پروژه‌های شهری و صنعتی.</p>
-            <div class="list">
-              <div class="list-item"><span class="dot"></span><span>کوپلینگ آلومینیومی و برنجی با آب‌بندی مقاوم در برابر فشار بالا</span></div>
-              <div class="list-item"><span class="dot"></span><span>شیلنگ برزنتی و لاستیکی در سایزهای متنوع تا ۳ اینچ</span></div>
-              <div class="list-item"><span class="dot"></span><span>هیدرانت، نازل، قرقره شیلنگ و لوله‌های رایزر با پوشش ضدخوردگی</span></div>
-              <div class="list-item"><span class="dot"></span><span>جعبه آتش‌نشانی، اسپرینکلر، خاموش‌کننده و تجهیزات اعلام حریق</span></div>
+            <h2 class="h2">کاتالوگ کامل محصولات آریاکوپلینگ</h2>
+            <p class="lead">تمامی تجهیزات آتش‌نشانی از کوپلینگ تا سیستم فوم در یک ویترین منظم؛ آماده تحویل و مطابق استانداردهای بین‌المللی.</p>
+            <div class="grid tight" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">کوپلینگ</div><strong>کوپلینگ آلومینیومی/برنجی</strong><p class="lead" style="margin:0">BS، DIN، STORZ، رزوه NPT و BSP</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">شیلنگ</div><strong>شیلنگ برزنتی و لاستیکی</strong><p class="lead" style="margin:0">۱ تا ۴ اینچ، لایه داخلی مقاوم شعله</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">قرقره</div><strong>قرقره و هوزریلز</strong><p class="lead" style="margin:0">سقف/دیوار، خودکار و دستی</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">هیدرانت</div><strong>هیدرانت زمینی و ایستاده</strong><p class="lead" style="margin:0">بدنه داکتیل با روکش اپوکسی</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">نازل</div><strong>نازل و مونیتور آب/فوم</strong><p class="lead" style="margin:0">قابل تنظیم دبی و الگو</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">جابجایی</div><strong>فلنج، تبدیل و کپ</strong><p class="lead" style="margin:0">سایزهای مختلف برای اتصال سریع</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">کابینت</div><strong>جعبه آتش‌نشانی</strong><p class="lead" style="margin:0">یک و دو لاین، استیل و رنگ پودری</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">خاموش‌کننده</div><strong>کپسول پودر و CO₂</strong><p class="lead" style="margin:0">۱ تا ۱۲ کیلو، مانومتر دار</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">اسپرینکلر</div><strong>اسپرینکلر سقفی</strong><p class="lead" style="margin:0">دما و اوریفیس‌های متنوع</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">اعلام</div><strong>دتکتور، آژیر و پنل</strong><p class="lead" style="margin:0">ادرس‌پذیر و متعارف</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">فوم</div><strong>اینداکتور و ژنراتور فوم</strong><p class="lead" style="margin:0">میکسر خطی، تانک بالانس</p></div>
+              <div class="card" style="gap:6px;padding:12px"><div class="chip">ابزار</div><strong>لوازم جانبی امداد</strong><p class="lead" style="margin:0">شلنگ جمع‌کن، کلید هیدرانت، دستکش</p></div>
             </div>
           </div>
           <div class="panel">
-            <div class="grid">
-              <div class="card">
-                <img src="https://images.unsplash.com/photo-1582719478318-82c2f6d93dc1?auto=format&fit=crop&w=800&q=80" alt="کوپلینگ آتش‌نشانی">
-                <div class="chip">کوپلینگ</div>
-                <strong>کوپلینگ آلومینیومی و برنجی</strong>
-                <p class="lead" style="margin:0">از سایز ۱.۵ تا ۴ اینچ، رزوه DIN و BS با تست فشار.</p>
-              </div>
-              <div class="card">
-                <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=800&q=80" alt="شیلنگ آتش نشانی">
-                <div class="chip">شیلنگ</div>
-                <strong>شیلنگ برزنتی فشارقوی</strong>
-                <p class="lead" style="margin:0">آستر مقاوم در برابر UV، مناسب عملیات شهری و صنعتی.</p>
-              </div>
-              <div class="card">
-                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" alt="هیدرانت">
-                <div class="chip">هیدرانت</div>
-                <strong>هیدرانت و رایزر آماده نصب</strong>
-                <p class="lead" style="margin:0">بدنه داکتیل با پوشش اپوکسی و قطعات یدکی کامل.</p>
-              </div>
-              <div class="card">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="سیستم ایمنی">
-                <div class="chip">ایمنی</div>
-                <strong>کیت کامل ایمنی و اعلام حریق</strong>
-                <p class="lead" style="margin:0">جعبه حریق، خاموش‌کننده، هشداردهنده و سنسور دود.</p>
-              </div>
+            <h3 class="h2" style="font-size:22px;margin:0 0 12px">چرا گرید جدید آریاکوپلینگ؟</h3>
+            <div class="list">
+              <div class="list-item"><span class="dot"></span><span>تفکیک رده صنعتی/شهری و سایز هر محصول برای انتخاب سریع</span></div>
+              <div class="list-item"><span class="dot"></span><span>تصاویر به‌روز تجهیزات آتش‌نشانی به‌جای فریم‌های قدیمی</span></div>
+              <div class="list-item"><span class="dot"></span><span>دسترسی مستقیم به دیتاشیت و کاتالوگ هر دسته</span></div>
+              <div class="list-item"><span class="dot"></span><span>CTA ثابت برای پیش‌فاکتور بدون نیاز به اسکرول‌های طولانی</span></div>
             </div>
+          </div>
+        </div>
+
+        <div class="grid-3" style="align-items:start">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1509420316987-d27c23b79d4a?auto=format&fit=crop&w=900&q=80" alt="کوپلینگ آتش‌نشانی">
+            <div class="chip">کوپلینگ & اتصالات</div>
+            <strong>کوپلینگ، تبدیل، فلنج و کپ</strong>
+            <p class="lead" style="margin:0">آلومینیوم و برنج با تست نشتی ۲۵ بار، رزوه NPT/BSP، مطابق BS 336 و DIN.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1547424773-9f6c2c9a1c9e?auto=format&fit=crop&w=900&q=80" alt="شیلنگ و قرقره">
+            <div class="chip">شیلنگ & قرقره</div>
+            <strong>شیلنگ برزنتی، لاستیکی و هوزریل</strong>
+            <p class="lead" style="margin:0">لاینر مقاوم در برابر حرارت، کوپلینگ پرسی، قرقره دیواری و سقفی با نازل سه حالته.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80" alt="هیدرانت و رایزر">
+            <div class="chip">هیدرانت & رایزر</div>
+            <strong>هیدرانت خشک و تر</strong>
+            <p class="lead" style="margin:0">بدنه داکتیل، پوشش اپوکسی، ولو برنجی، خروجی‌های BS و DIN با لوازم جانبی کامل.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1488238836041-70b6605e107e?auto=format&fit=crop&w=900&q=80" alt="نازل و مونیتور">
+            <div class="chip">نازل & مونیتور</div>
+            <strong>نازل چندحالته و مونیتور ثابت/سیار</strong>
+            <p class="lead" style="margin:0">تنظیم الگوی پاشش، دبی ۲۵۰ تا ۳۰۰۰ لیتر، بدنه آلومینیوم/برنز.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1494809610410-160faaed4de0?auto=format&fit=crop&w=900&q=80" alt="کابینت آتش نشانی">
+            <div class="chip">کابینت & کپسول</div>
+            <strong>جعبه آتش‌نشانی، کپسول و اسپرینکلر</strong>
+            <p class="lead" style="margin:0">کابینت استیل/رنگی، کپسول پودر و CO₂، اسپرینکلر روکار و توکار.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1502918536363-6a5c3d48a6d8?auto=format&fit=crop&w=900&q=80" alt="سیستم فوم">
+            <div class="chip">فوم & اعلام حریق</div>
+            <strong>سیستم فوم، دتکتور و آژیر</strong>
+            <p class="lead" style="margin:0">اینداکتور خطی، تانک بالانس، ژنراتور فوم، دتکتور دود/حرارت و پنل اعلام.</p>
           </div>
         </div>
       </div>

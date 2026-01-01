@@ -28,6 +28,7 @@
       --radius: 22px;
       --radius-2: 16px;
       --container: 1180px;
+      --glass-blur: 0px;       /* reduce heavy blurs to keep page snappy */
     }
 
     *{box-sizing:border-box}
@@ -53,7 +54,7 @@
       border:1px solid var(--border);
       border-radius:999px;
       background:rgba(255,255,255,.6);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(var(--glass-blur));
       font-size:13px;
       color:var(--ink-2);
     }
@@ -110,7 +111,7 @@
     .topbar{
       border-bottom:1px solid var(--border);
       background: rgba(255,255,255,.8);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       position:relative;
       z-index:30;
     }
@@ -120,6 +121,7 @@
       font-size:13px; color:var(--muted);
     }
     .topbar-left, .topbar-right{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .topbar-left{flex-wrap:nowrap; white-space:nowrap}
     .topbar a{color:var(--ink-2)}
     .sep{opacity:.35}
 
@@ -128,7 +130,7 @@
       position:sticky; top:0;
       z-index:40;
       background: rgba(255,255,255,.72);
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(var(--glass-blur));
       border-bottom:1px solid transparent;
       transition: border-color .2s ease, background .2s ease;
     }
@@ -255,7 +257,7 @@
       border-radius:16px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.7);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       font-size:13px;
       color:var(--ink-2);
     }
@@ -294,7 +296,7 @@
       border-radius:16px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.85);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       font-size:13px;
       color:var(--muted);
     }
@@ -318,7 +320,7 @@
       border-radius:18px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.8);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(var(--glass-blur));
       overflow:hidden;
       display:flex;
       flex-direction:column;
@@ -354,7 +356,7 @@
       border-radius:18px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.86);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       overflow:hidden;
       display:flex;
       flex-direction:column;
@@ -406,7 +408,7 @@
       border-radius: 18px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.7);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       box-shadow: 0 1px 0 rgba(16,24,40,.03);
     }
     .s .i{
@@ -523,7 +525,7 @@
       border-radius: 16px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.85);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       color:var(--ink-2);
       font-size:13px;
     }
@@ -533,7 +535,7 @@
       border-radius: 20px;
       border:1px solid rgba(16,24,40,.10);
       background: rgba(255,255,255,.86);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(var(--glass-blur));
       overflow:hidden;
       box-shadow: 0 1px 0 rgba(16,24,40,.03);
     }
@@ -874,7 +876,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="reveal">
-          <span class="pill"><span class="dot"></span> دمو ۱ (استایل مدرن / الهام از رول‌پارک) — آماده برای ریدیزاین</span>
+          <span class="pill"><span class="dot"></span> دمو ۱ (استایل مدرن و مینیمال) — آماده برای ریدیزاین</span>
           <h1>تجهیزات آتش‌نشانی «استاندارد»، با طراحی دقیق و تولید صنعتی</h1>
           <p>
             از <b>جعبه آتش‌نشانی</b> و <b>قرقره و شیلنگ</b> تا <b>اتصالات BS و STORZ</b>، <b>اسپرینکلر</b>، <b>نازل</b> و <b>شیرآلات</b> —
@@ -1061,7 +1063,7 @@
       <div class="container">
         <div class="reveal">
           <h2 class="h2">از نیاز پروژه تا انتخاب محصول؛ مسیر ساده و قابل‌پیگیری</h2>
-          <p class="lead">این بخش با استایل «اینفوگرافیک و مرحله‌ای» طراحی شده تا مثل رول‌پارک، روایت محصول/خدمت را سریع و جذاب منتقل کند.</p>
+          <p class="lead">این بخش با استایل «اینفوگرافیک و مرحله‌ای» طراحی شده تا روایت محصول/خدمت را سریع و جذاب منتقل کند.</p>
         </div>
 
         <div class="grid steps">
